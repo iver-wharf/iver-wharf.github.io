@@ -15,7 +15,7 @@
 
   - [Variables](usage/variables.md)
 
-    - [Syntax](usage/variables/syntax.md)
+    - [Variable syntax](usage/variables/variable-syntax.md)
     - [Built-in variables](usage/variables/built-in-variables.md)
     - [Input variables](usage/variables/input-variables.md)
     - [Evaluation order](usage/variables/evaluation-order.md)

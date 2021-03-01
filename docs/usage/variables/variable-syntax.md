@@ -1,4 +1,4 @@
-# Syntax
+# Variable syntax
 
 <!-- panels:start -->
 
