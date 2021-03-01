@@ -19,3 +19,11 @@
     - [Built-in variables](usage-wharfyml/variables/built-in-variables.md)
     - [Input variables](usage-wharfyml/variables/input-variables.md)
     - [Evaluation order](usage-wharfyml/variables/evaluation-order.md)
+
+- Development (of Wharf)
+
+  - [Debugging in GoLand](development/debugging-in-goland.md)
+  
+  - Things to keep in mind
+
+    - [Postgres and column named default](development/postgres-and-column-named-default.md)
