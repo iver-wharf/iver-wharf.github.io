@@ -1,0 +1,3 @@
+# Wharf documentation
+
+Hello world.
