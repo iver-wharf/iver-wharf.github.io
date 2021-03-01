@@ -22,6 +22,6 @@ Those variables are:
 | REPO_NAME | The name of the git repository. | `web-ng`
 
 Other variable sources includes: variables from current
-[environment](/usage/environments.md) and
-[inputs](/usage/variables/input-variables.md)
+[environment](/usage-wharfyml/environments.md) and
+[inputs](/usage-wharfyml/variables/input-variables.md)
 
