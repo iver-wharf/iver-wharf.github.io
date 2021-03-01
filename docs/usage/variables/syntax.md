@@ -1,5 +1,9 @@
 # Syntax
 
+<!-- panels:start -->
+
+<!-- div:left-panel -->
+
 To declare a place to substitute with a variable, use the syntax:
 
 ```
@@ -13,6 +17,8 @@ named `foo`, use the syntax:
 ```
 ${%variable-name%}
 ```
+
+<!-- div:right-panel -->
 
 For example, if there was a variable named `lorem` with the value of `ipsum`,
 the following substitutions would be true
@@ -29,6 +35,8 @@ the following substitutions would be true
 | `Foo ${%lorem} bar` | ❌ error: undefined variable: `%lorem`
 | `Foo ${} bar` | ❌ error: variable name cannot be empty
 
+<!-- panels:end -->
+
 Variables may be used in:
 
 - ✔ step type values
@@ -44,6 +52,10 @@ Variables may not be used in:
 ## Example
 
 ### Referencing files dynamically
+
+<!-- panels:start -->
+
+<!-- div:left-panel -->
 
 Here, `deploy.all.kubectl.file` will evaluate to `deploy/foo.yml`, then that
 file will be loaded.
@@ -63,7 +75,26 @@ deploy:
       file: deploy/${my-variable}.yml
 ```
 
+<!-- div:right-panel -->
+
+Running a build with environment set to `my-environment` would be equivalent
+to just having this `.wharf-ci.yml` config file:
+
+```yaml
+# .wharf-ci.yml
+deploy:
+  all:
+    kubectl:
+      file: deploy/foo.yml
+```
+
+<!-- panels:end -->
+
 ### Kubernetes object name based on environment
+
+<!-- panels:start -->
+
+<!-- div:left-panel -->
 
 Here, `${my-other-variable}` will be replaced by Wharf before result is given to
 the `kubectl apply -f` invocation. If the file would include:
@@ -76,6 +107,8 @@ metadata:
   name: ${my-other-variable}
 ```
 
+<!-- div:right-panel -->
+
 Then the following file would be given to `kubectl apply -f`, creating a
 namespace named `bar` in the process:
 
@@ -86,3 +119,5 @@ kind: Namespace
 metadata:
   name: bar
 ```
+
+<!-- panels:end -->
