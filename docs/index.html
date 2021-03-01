@@ -10,6 +10,10 @@
 </head>
 <body>
   <div id="app"></div>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Edit on GitHub -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
   <script>
     window.$docsify = {
       name: 'Wharf documentation',
@@ -19,12 +23,21 @@
       auto2top: true,
       themeColor: '#292C31',
       formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
+      plugins: [
+        EditOnGithubPlugin.create(
+          'https://github.com/iver-wharf/iver-wharf.github.io/blob/master/docs/',
+          'https://github.com/iver-wharf/iver-wharf.github.io/blob/master/docs/'
+        ),
+      ],
     }
   </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Additional syntax highlighting -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+  <!-- Searching -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- Copy code block to clipboard -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 </body>
 </html>
