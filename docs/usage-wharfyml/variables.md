@@ -40,5 +40,5 @@ Wharf build ID: 123.
 
 <!-- panels:end -->
 
-See the page on [variable syntax](/usage-wharfyml/variables/syntax.md) to get a firmer
-grasp on how to use and escape variable substitution.
+See the page on [variable syntax](/usage-wharfyml/variables/variable-syntax.md)
+to get a firmer grasp on how to use and escape variable substitution.
