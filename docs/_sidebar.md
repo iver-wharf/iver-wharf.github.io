@@ -1,5 +1,7 @@
 - Using Wharf
 
+  - [Environments](usage/environments.md)
+
   - [Stages and steps](usage/stages-and-steps.md)
 
   - [Step types](usage/step-types.md)
@@ -11,3 +13,9 @@
     - [kubectl](usage/step-types/kubectl.md)
     - [nuget-package](usage/step-types/nuget-package.md)
 
+  - [Variables](usage/variables.md)
+
+    - [Syntax](usage/variables/syntax.md)
+    - [Built-in variables](usage/variables/built-in-variables.md)
+    - [Input variables](usage/variables/input-variables.md)
+    - [Evaluation order](usage/variables/evaluation-order.md)

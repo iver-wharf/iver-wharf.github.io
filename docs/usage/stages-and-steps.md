@@ -2,18 +2,18 @@
 
 The `.wharf-ci.yml` file is divided into Stages and Steps.
 
-### Stages
+## Stages
 
 - Each stage can have any name as long as it's unique within the file
 - Each stage can contain several steps
 - Each stage is executed in sequence
 
-### Steps
+## Steps
 
 - Each step can have any name as long as it's unique whithin its stage
 - Each step is executed in parallel within its stage
 
-### Example
+## Example
 
 ```yaml
 build:
