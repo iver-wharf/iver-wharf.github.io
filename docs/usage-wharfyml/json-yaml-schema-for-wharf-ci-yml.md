@@ -8,7 +8,7 @@ Wharf has such a schema for their `.wharf-ci.yml` file.
 
 ## The JSON schema
 
-File is hosted here: <https://iver-wharf.gitlab.io/_static/wharf-ci-schema.json>
+File is hosted here: <https://iver-wharf.github.io/_static/wharf-ci-schema.json>
 
 ## Adding to Visual Studio Code
 
@@ -25,7 +25,7 @@ File is hosted here: <https://iver-wharf.gitlab.io/_static/wharf-ci-schema.json>
 
    ```json
        "yaml.schemas":{
-           "https://iver-wharf.gitlab.io/_static/wharf-ci-schema.json": [
+           "https://iver-wharf.github.io/_static/wharf-ci-schema.json": [
                ".wharf-ci.yml",
            ]
        },
