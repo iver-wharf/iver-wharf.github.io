@@ -21,3 +21,7 @@
     - [Evaluation order](usage-wharfyml/variables/evaluation-order.md)
 
   - [JSON/YAML schema for .wharf-ci.yml](usage-wharfyml/json-yaml-schema-for-wharf-ci-yml.md)
+
+- Reference
+
+  - [Swagger (self-hosted)](reference/swagger-self-hosted.md)
