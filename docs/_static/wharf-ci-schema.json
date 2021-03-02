@@ -204,7 +204,9 @@
                         },
                         "registry": {
                             "type": "string",
-                            "default": "https://harbor.dgc.local"
+                            "examples": [
+                                "https://harbor.local"
+                            ]
                         },
                         "append-cert": {
                             "type": "boolean"
@@ -277,7 +279,7 @@
                         "secretName": {
                             "type": "string",
                             "examples": [
-                                "spark-system-tests-secret"
+                                "myproject-system-tests-secret"
                             ]
                         }
                     }
@@ -331,9 +333,8 @@
                         "cluster": {
                             "type": "string",
                             "examples": [
-                                "kubectl-config",
-                                "hybrid-config",
-                                "dev-config"
+                                "stage-cluster-config",
+                                "prod-cluster-config"
                             ]
                         }
                     }
@@ -369,7 +370,9 @@
                         },
                         "repo": {
                             "type": "string",
-                            "default": "https://harbor.dgc.local/chartrepo"
+                            "examples": [
+                                "https://harbor.local/chartrepo"
+                            ]
                         },
                         "set": {
                             "type": "array",
@@ -415,9 +418,8 @@
                         "cluster": {
                             "type": "string",
                             "examples": [
-                                "kubectl-config",
-                                "hybrid-config",
-                                "dev-config"
+                                "stage-cluster-config",
+                                "prod-cluster-config"
                             ]
                         }
                     }
@@ -446,7 +448,9 @@
                         },
                         "destination": {
                             "type": "string",
-                            "default": "https://harbor.dgc.local/chartrepo/default"
+                            "examples": [
+                                "https://harbor.local/chartrepo/default"
+                            ]
                         }
                     }
                 },
@@ -464,7 +468,7 @@
                         "project-path": {
                             "type": "string",
                             "examples": [
-                                "src/Iver.Spark.Service.Api.Client"
+                                "src/MyProject"
                             ]
                         },
                         "version": {
@@ -476,7 +480,7 @@
                         "repo": {
                             "type": "string",
                             "examples": [
-                                "http://nuget.dgc.local/libs/api/v2/package"
+                                "http://nuget.local/libs/api/v2/package"
                             ]
                         }
                     }
