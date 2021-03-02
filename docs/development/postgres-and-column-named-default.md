@@ -18,7 +18,7 @@ m.Database.Where("default = ?", true)
 ```go
 // Good:
 m.Database.Where("\"default\" = ?", true)
-// Good'er:
+// Good:
 m.Database.Where(`"default" = ?`, true)
 ```
 
@@ -35,7 +35,7 @@ m.Database.
 	Where("default = ? AND project_id = ? AND name != ?", true, defaultBranch.ProjectID, defaultBranch.Name).
 	Update("default", false)
 
-// Bad'er:
+// Bad:
 m.Database.
 	Model(&Branch{}).
 	Where("default = ? AND project_id = ? AND name != ?", true, defaultBranch.ProjectID, defaultBranch.Name).
@@ -49,7 +49,7 @@ m.Database.
 	Where("\"default\" = ? AND project_id = ? AND name != ?", true, defaultBranch.ProjectID, defaultBranch.Name).
 	Update("default", false)
 
-// Good'er:
+// Good:
 m.Database.
 	Model(&Branch{}).
 	Where(`"default" = ? AND project_id = ? AND name != ?`, true, defaultBranch.ProjectID, defaultBranch.Name).
