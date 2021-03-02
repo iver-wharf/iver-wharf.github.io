@@ -21,3 +21,7 @@
     - [Built-in variables](usage-wharfyml/variables/built-in-variables.md)
     - [Input variables](usage-wharfyml/variables/input-variables.md)
     - [Evaluation order](usage-wharfyml/variables/evaluation-order.md)
+
+- Reference
+
+  - [Swagger (self-hosted)](reference/swagger-self-hosted.md)
