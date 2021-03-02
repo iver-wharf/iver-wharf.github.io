@@ -130,18 +130,3 @@ Goland.
    !["Debug" panel with breakpoint and local variables](../_images/debugging-in-goland/breakpoint.png)
    
 Done!
-
-### Query postgre db when column name is default
-
-```
-m.Database.Where("\"default\" = ? ", true)
-```
-
-in case of update'ing word 'default' should be escaped in .Where but not in .Update (strange behaviour). Escaping it in Update brokes update and it doesn't run. So that's the proper way of doing it:
-
-```
-		Model(&Branch{}).
-		Where("\"default\" = ? AND project_id = ? AND name != ?", true, defaultBranch.ProjectID, defaultBranch.Name).
-		Update("default", false).Error; err != nil {
-```
-
