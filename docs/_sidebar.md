@@ -20,6 +20,10 @@
     - [Input variables](usage-wharfyml/variables/input-variables.md)
     - [Evaluation order](usage-wharfyml/variables/evaluation-order.md)
 
+- Reference
+
+  - [Swagger (self-hosted)](reference/swagger-self-hosted.md)
+
 - Development (of Wharf)
 
   - [Debugging in GoLand](development/debugging-in-goland.md)
