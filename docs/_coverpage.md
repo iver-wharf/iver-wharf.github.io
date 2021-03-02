@@ -1,3 +1,5 @@
+![logo](_static/logo.svg ':size=200')
+
 # Wharf
 
 > Self-hosted CI/CD solution
