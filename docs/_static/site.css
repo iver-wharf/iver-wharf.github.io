@@ -1,0 +1,38 @@
+
+.iver-logo-left, .iver-logo-right {
+	line-height: 100px;
+	display: block;
+}
+
+.iver-logo-left svg .st0, .iver-logo-right svg .st0 {
+	fill: #000000;
+}
+
+.iver-logo-left {
+	float: left;
+}
+.iver-logo-left svg {
+	height: 36px;
+}
+
+.iver-logo-right {
+	float: right;
+}
+.iver-logo-right svg {
+	height: 40px;
+}
+
+/* Utility classes 
+ *
+ * Example usage:
+ * ![my image](_images/some-image.png ':class=float-right')
+ *
+ * */
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
