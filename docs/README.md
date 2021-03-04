@@ -8,7 +8,7 @@ that takes up significant CPU/RAM resources is your builds themselves.
 You deploy Wharf and grant it access to a [Kubernetes][kubernetes] cluster,
 where it will start any builds you tell it to run. You connect your favorite
 project provider, being [GitHub][github], [GitLab][gitlab], or
-[Azure DevOps][azuredevops]; or any other provider by creating your own provider
+[Azure DevOps][azuredevops], or any other provider by creating your own provider
 driver for anything as long as it can allow Wharf to obtain its files.
 
 The backend of Wharf is written in the [Go][go] language together with the
