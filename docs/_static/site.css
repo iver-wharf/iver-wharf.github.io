@@ -1,25 +1,26 @@
 
-.iver-logo-left, .iver-logo-right {
-	line-height: 100px;
+.iver-logo-wordmark, .iver-logo-symbol {
+	line-height: 6rem;
 	display: block;
 }
 
-.iver-logo-left svg .st0, .iver-logo-right svg .st0 {
+.iver-logo-wordmark svg .st0, .iver-logo-symbol svg .st0 {
 	fill: #000000;
 }
 
-.iver-logo-left {
+.iver-logo-wordmark {
 	float: left;
 }
-.iver-logo-left svg {
-	height: 36px;
+.iver-logo-wordmark svg {
+	/* logotype wordmark shall be 90% height of the symbols height */
+	height: 2.7rem;
 }
 
-.iver-logo-right {
+.iver-logo-symbol {
 	float: right;
 }
-.iver-logo-right svg {
-	height: 40px;
+.iver-logo-symbol svg {
+	height: 3rem;
 }
 
 /* Utility classes 
