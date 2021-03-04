@@ -32,6 +32,10 @@ Let's say it's the main API, then you open the `api` project using GoLand.
 
 ## 3. Modify the Dockerfile
 
+<!-- panels:start -->
+
+<!-- div:left-panel -->
+
 1. In first step of multistage build we need to install Delve debugger:
    <https://github.com/go-delve/delve>
 
@@ -46,12 +50,40 @@ Let's say it's the main API, then you open the `api` project using GoLand.
 5. To run Delve during container start change entrypoint of container to:
 
    ```dockerfile
-   CMD ["/dlv", "--listen=:40000", "--headless=true", "--api-version=2", "--accept-multiclient", "exec", "/app/main"]
+   ENTRYPOINT ["/dlv"]
    ```
 
-![Dockerfile Git diff](../_images/debugging-in-goland/dockerfile-diff.png)
+<!-- div:right-panel language-diff-markdown diff-highlight -->
+
+Changes as a "diff":
+
+```diff
+ FROM golang:1.13.4 AS build
+ WORKDIR /src
+ ENV GO111MODULE=on
++RUN go get github.com/go-delve/delve/cmd/dlv
+ RUN go get -u github.com/swaggo/swag/cmd/swag@v1.6.3
+ COPY . /src
+-RUN swag init && CGO_ENABLED=0 go build -o main \
++RUN swag init && CGO_ENABLED=0 go build -gcflags "all=-N -1" -o main \
+     && go test
+
+-FROM scratch AS final
++FROM debian:buster AS final
+ WORKDIR /app
++COPY --from=build /go/bin/dlv /
+ COPY --from=build /src/main /app/
+-ENTRYPOINT ["/app/main"]
++ENTRYPOINT ["/dlv"]
+```
+
+<!-- panels:end -->
 
 ## 4. Modify the docker-compose.yaml
+
+<!-- panels:start -->
+
+<!-- div:left-panel -->
 
 1. To route traffic to delve debugger add 40000 port routing in ports part:
 
@@ -67,9 +99,65 @@ Let's say it's the main API, then you open the `api` project using GoLand.
      - "seccomp:unconfined"
    cap_add:
      - SYS_PTRACE
+   command: >
+     --listen=:40000
+     --headless=true
+     --api-version=2
+     --accept-multiclient
+     exec /app/main
    ```
 
-![docker-compose.yml Git diff](../_images/debugging-in-goland/compose-diff.png)
+   You can add more arguments to the `command` by appending them to the end,
+   but keep in mind that you have to add `--` after `/app/main`. Example of
+   adding the argument `--loglevel=trace`:
+   
+   ```yaml
+    command: >
+      --listen=:40000
+      --headless=true
+      --api-version=2
+      --accept-multiclient
+      exec /app/main
+      --
+      --loglevel=trace
+   ```
+
+<!-- div:right-panel -->
+
+Changes as a "diff":
+
+```diff
+@@ -31,6 +34,7 @@ services:
+   api:
+     build:
+       context: api
+     ports:
+     - "5003:8083"
++    - "40000:40000"
+     networks:
+       - rabbitmq
+       - db
+@@ -63,6 +65,10 @@ services:
+     - WHARF_INSTANCE=local
+     volumes:
+     - ./api/dev/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt
++    security_opts:
++      - "seccomp:unconfined"
++    cap_add:
++      - SYS_PTRACE
++    command: >
++      --listen=:40000
++      --headless=true
++      --api-version=2
++      --accept-multiclient
++      exec /app/main
+
+   import-gitlab:
+     build:
+       context: gitlab
+```
+
+<!-- panels:end -->
 
 ## 5. Rebuild image
 
