@@ -99,7 +99,7 @@ Changes as a "diff":
      - "seccomp:unconfined"
    cap_add:
      - SYS_PTRACE
-   command: >
+   command: >-
      --listen=:40000
      --headless=true
      --api-version=2
@@ -112,7 +112,7 @@ Changes as a "diff":
    adding the argument `--loglevel=trace`:
    
    ```yaml
-    command: >
+    command: >-
       --listen=:40000
       --headless=true
       --api-version=2
@@ -145,7 +145,7 @@ Changes as a "diff":
 +      - "seccomp:unconfined"
 +    cap_add:
 +      - SYS_PTRACE
-+    command: >
++    command: >-
 +      --listen=:40000
 +      --headless=true
 +      --api-version=2
