@@ -1,5 +1,7 @@
 - Using .wharf-ci.yml
 
+  - [The .wharf-ci.yml file](usage-wharfyml/the-wharf-ci-yml-file.md)
+
   - [Environments](usage-wharfyml/environments.md)
 
   - [Stages and steps](usage-wharfyml/stages-and-steps.md)
