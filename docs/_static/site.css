@@ -23,17 +23,3 @@
 	height: 3rem;
 }
 
-/* Utility classes 
- *
- * Example usage:
- * ![my image](_images/some-image.png ':class=float-right')
- *
- * */
-
-.float-right {
-	float: right;
-}
-
-.float-left {
-	float: left;
-}
