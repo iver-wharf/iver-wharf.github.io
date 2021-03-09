@@ -1,0 +1,25 @@
+
+.iver-logo-wordmark, .iver-logo-symbol {
+	line-height: 6rem;
+	display: block;
+}
+
+.iver-logo-wordmark svg .st0, .iver-logo-symbol svg .st0 {
+	fill: #000000;
+}
+
+.iver-logo-wordmark {
+	float: left;
+}
+.iver-logo-wordmark svg {
+	/* logotype wordmark shall be 90% height of the symbols height */
+	height: 2.7rem;
+}
+
+.iver-logo-symbol {
+	float: right;
+}
+.iver-logo-symbol svg {
+	height: 3rem;
+}
+
