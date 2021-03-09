@@ -27,3 +27,11 @@
 - Reference
 
   - [Swagger (self-hosted)](reference/swagger-self-hosted.md)
+
+- Development (of Wharf)
+
+  - [Debugging in GoLand](development/debugging-in-goland.md)
+  
+  - Things to keep in mind
+
+    - [Postgres and column named default](development/postgres-and-column-named-default.md)
