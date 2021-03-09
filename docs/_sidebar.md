@@ -1,5 +1,7 @@
 - Using .wharf-ci.yml
 
+  - [The .wharf-ci.yml file](usage-wharfyml/the-wharf-ci-yml-file.md)
+
   - [Environments](usage-wharfyml/environments.md)
 
   - [Stages and steps](usage-wharfyml/stages-and-steps.md)
@@ -20,6 +22,16 @@
     - [Input variables](usage-wharfyml/variables/input-variables.md)
     - [Evaluation order](usage-wharfyml/variables/evaluation-order.md)
 
+  - [JSON/YAML schema for .wharf-ci.yml](usage-wharfyml/json-yaml-schema-for-wharf-ci-yml.md)
+
 - Reference
 
   - [Swagger (self-hosted)](reference/swagger-self-hosted.md)
+
+- Development (of Wharf)
+
+  - [Debugging in GoLand](development/debugging-in-goland.md)
+  
+  - Things to keep in mind
+
+    - [Postgres and column named default](development/postgres-and-column-named-default.md)

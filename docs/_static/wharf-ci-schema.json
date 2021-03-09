@@ -1,0 +1,505 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Wharf configuration schema (.wharf-ci.yml)",
+    "type": "object",
+    "properties": {
+        "environments": {
+            "type": "object",
+            "title": "Wharf build environment variables definitions",
+            "description": "Wharf environment variables per environment available when starting a build for this project. The 'environments' property inside each stage refers to the property name as defined here directly under this global 'environments' map/object.",
+            "additionalProperties": {
+                "type": "object",
+                "title": "Map/object of environment variables",
+                "description": "Each variable defined here can later be used inside most fields and inside referenced files (for example, inside kubectl.file) when written in the format of ${name-of-variable}. A simple string substitution is performed in values and files inside the steps.",
+                "additionalProperties": {
+                    "type": [
+                        "boolean",
+                        "integer",
+                        "number",
+                        "string"
+                    ]
+                }
+            }
+        },
+        "inputs": {
+            "title": "Input variables",
+            "description": "When starting a build via Wharf, you have the option to fill out input variables that are defined here.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "anyOf": [
+                    {
+                        "title": "Choice input",
+                        "description": "Let's the user choose between the given options defined in the 'values' property.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                            "type",
+                            "name",
+                            "values"
+                        ],
+                        "properties": {
+                            "type": {
+                                "title": "Input type",
+                                "type": "string",
+                                "const": "choice"
+                            },
+                            "name": {
+                                "title": "Input name",
+                                "description": "This name is what's shown in the front-end for the user, as well as being available as a variable to be used inside most fields and inside referenced files (for example, inside kubectl.file) when written in the format of ${name-of-variable}. A simple string substitution is performed in values and files inside the steps.",
+                                "type": "string"
+                            },
+                            "default": {
+                                "title": "Input default value",
+                                "description": "Default value that is pre-populated in the input in the front-end for the user when they start a new build.",
+                                "type": "string"
+                            },
+                            "values": {
+                                "title": "Input options for 'choose' type",
+                                "description": "An array of string values that the user is presented with to choose between.",
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "title": "String/text input",
+                        "description": "Let's the user enter a value in a free text input field.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                            "type",
+                            "name"
+                        ],
+                        "properties": {
+                            "type": {
+                                "title": "Input type",
+                                "type": "string",
+                                "const": "string"
+                            },
+                            "name": {
+                                "title": "Input name",
+                                "description": "This name is what's shown in the front-end for the user, as well as being available as a variable to be used inside most fields and inside referenced files (for example, inside kubectl.file) when written in the format of ${name-of-variable}. A simple string substitution is performed in values and files inside the steps.",
+                                "type": "string"
+                            },
+                            "default": {
+                                "title": "Input default value",
+                                "description": "Default value that is pre-populated in the input in the front-end for the user when they start a new build.",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "title": "Password input",
+                        "description": "Let's the user enter a value in a free text input field, but where the input is masked in the front-end. Semantically identical to the 'string' input type.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                            "type",
+                            "name"
+                        ],
+                        "properties": {
+                            "type": {
+                                "title": "Input type",
+                                "type": "string",
+                                "const": "password"
+                            },
+                            "name": {
+                                "title": "Input name",
+                                "description": "This name is what's shown in the front-end for the user, as well as being available as a variable to be used inside most fields and inside referenced files (for example, inside kubectl.file) when written in the format of ${name-of-variable}. A simple string substitution is performed in values and files inside the steps.",
+                                "type": "string"
+                            },
+                            "default": {
+                                "title": "Input default value",
+                                "description": "Default value that is pre-populated in the input in the front-end for the user when they start a new build.",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "title": "Number input",
+                        "description": "Let's the user enter a numeric value.",
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                            "type",
+                            "name"
+                        ],
+                        "properties": {
+                            "type": {
+                                "title": "Input type",
+                                "type": "string",
+                                "const": "number"
+                            },
+                            "name": {
+                                "title": "Input name",
+                                "description": "This name is what's shown in the front-end for the user, as well as being available as a variable to be used inside most fields and inside referenced files (for example, inside kubectl.file) when written in the format of ${name-of-variable}. A simple string substitution is performed in values and files inside the steps.",
+                                "type": "string"
+                            },
+                            "default": {
+                                "title": "Input default value",
+                                "description": "Default value that is pre-populated in the input in the front-end for the user when they start a new build.",
+                                "type": [
+                                    "number",
+                                    "integer"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": {
+        "title": "Wharf build stage",
+        "description": "A build stage map/object. All stages will run in sequence of each other, and all stages shall include one or more build step. Build steps inside a build stage is specified by adding steps to this map/object.",
+        "type": "object",
+        "additionalProperties": {
+            "title": "Wharf build step",
+            "description": "Map/object for a Wharf build step. All steps are run in parallell of the other steps inside the same build stage. Specify the step type by adding a property inside this build step, for example 'container'. Build steps can only contain 1 step type.",
+            "type": "object",
+            "maxProperties": 1,
+            "additionalProperties": false,
+            "properties": {
+                "docker": {
+                    "title": "Docker build step type",
+                    "description": "Build an image from a Dockerfile and push to a registry.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                        "file",
+                        "tag"
+                    ],
+                    "properties": {
+                        "file": {
+                            "type": "string",
+                            "examples": [
+                                "src/api/Dockerfile"
+                            ]
+                        },
+                        "tag": {
+                            "type": "string",
+                            "examples": [
+                                "latest,${GIT_COMMIT},${GIT_TAG}"
+                            ]
+                        },
+                        "name": {
+                            "type": "string"
+                        },
+                        "group": {
+                            "type": "string",
+                            "default": "default"
+                        },
+                        "context": {
+                            "type": "string",
+                            "default": ".",
+                            "examples": [
+                                "src/api"
+                            ]
+                        },
+                        "secret": {
+                            "type": "string"
+                        },
+                        "registry": {
+                            "type": "string",
+                            "examples": [
+                                "https://harbor.local"
+                            ]
+                        },
+                        "append-cert": {
+                            "type": "boolean"
+                        },
+                        "push": {
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "args": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "examples": [
+                                [
+                                    "FIRST_ARG=Value from '.wharf-ci.yml' file!",
+                                    "SECOND_ARG=12453125"
+                                ]
+                            ]
+                        }
+                    }
+                },
+                "container": {
+                    "title": "Container build step type",
+                    "description": "Run commands in a container.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                        "image",
+                        "cmds"
+                    ],
+                    "properties": {
+                        "image": {
+                            "type": "string",
+                            "examples": [
+                                "alpine:latest"
+                            ]
+                        },
+                        "cmds": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "examples": [
+                                [
+                                    "echo 'hello world'"
+                                ]
+                            ]
+                        },
+                        "os": {
+                            "type": "string",
+                            "default": "linux",
+                            "enum": [
+                                "linux",
+                                "windows"
+                            ]
+                        },
+                        "shell": {
+                            "type": "string",
+                            "examples": [
+                                "/bin/sh"
+                            ]
+                        },
+                        "certificatesMountPath": {
+                            "type": "string",
+                            "examples": [
+                                "/usr/local/share/ca-certificates"
+                            ]
+                        },
+                        "secretName": {
+                            "type": "string",
+                            "examples": [
+                                "myproject-system-tests-secret"
+                            ]
+                        }
+                    }
+                },
+                "kubectl": {
+                    "title": "Kubectl build step type",
+                    "description": "Run `kubectl apply -f` on a Kubernetes manifest.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                        "namespace"
+                    ],
+                    "properties": {
+                        "file": {
+                            "type": "string",
+                            "examples": [
+                                "deploy/api.yaml"
+                            ]
+                        },
+                        "files": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "examples": [
+                                [
+                                    "deploy/api.yaml"
+                                ]
+                            ]
+                        },
+                        "namespace": {
+                            "type": "string",
+                            "examples": [
+                                "stage"
+                            ]
+                        },
+                        "action": {
+                            "type": "string",
+                            "default": "apply",
+                            "examples": [
+                                "apply",
+                                "create",
+                                "patch",
+                                "delete"
+                            ]
+                        },
+                        "force": {
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "cluster": {
+                            "type": "string",
+                            "examples": [
+                                "stage-cluster-config",
+                                "prod-cluster-config"
+                            ]
+                        }
+                    }
+                },
+                "helm": {
+                    "title": "Helm-deploy build step type",
+                    "description": "Install or upgrade a helm-chart.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                        "chart",
+                        "name",
+                        "namespace"
+                    ],
+                    "properties": {
+                        "chart": {
+                            "type": "string",
+                            "examples": [
+                                "web-app"
+                            ]
+                        },
+                        "name": {
+                            "type": "string",
+                            "examples": [
+                                "test-deploy"
+                            ]
+                        },
+                        "namespace": {
+                            "type": "string",
+                            "examples": [
+                                "stage"
+                            ]
+                        },
+                        "repo": {
+                            "type": "string",
+                            "examples": [
+                                "https://harbor.local/chartrepo"
+                            ]
+                        },
+                        "set": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "minProperties": 1,
+                                "maxProperties": 1
+                            },
+                            "examples": [
+                                [
+                                    {
+                                        "image.tag": "latest"
+                                    }
+                                ]
+                            ]
+                        },
+                        "files": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "examples": [
+                                [
+                                    "deploy/values.yaml"
+                                ]
+                            ]
+                        },
+                        "chartVersion": {
+                            "type": "string",
+                            "examples": [
+                                "0.1.22"
+                            ]
+                        },
+                        "helmVersion": {
+                            "type": "string",
+                            "examples": [
+                                "v2.14.1",
+                                "v3.0.2",
+                                "v3.2.0",
+                                "latest"
+                            ]
+                        },
+                        "cluster": {
+                            "type": "string",
+                            "examples": [
+                                "stage-cluster-config",
+                                "prod-cluster-config"
+                            ]
+                        }
+                    }
+                },
+                "helm-package": {
+                    "title": "Helm-package build step type",
+                    "description": "Packages a sub-folder or repo into a helm-chart and pushes it to a chart-repository.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                        "version",
+                        "chart-path"
+                    ],
+                    "properties": {
+                        "version": {
+                            "type": "string",
+                            "examples": [
+                                "${GIT_TAG}"
+                            ]
+                        },
+                        "chart-path": {
+                            "type": "string",
+                            "examples": [
+                                "/web-app"
+                            ]
+                        },
+                        "destination": {
+                            "type": "string",
+                            "examples": [
+                                "https://harbor.local/chartrepo/default"
+                            ]
+                        }
+                    }
+                },
+                "nuget-package": {
+                    "title": "NuGet-package build step type",
+                    "description": "Packages a .NET project into a NuGet and pushes it to a NuGet-repository.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                        "project-path",
+                        "version",
+                        "repo"
+                    ],
+                    "properties": {
+                        "project-path": {
+                            "type": "string",
+                            "examples": [
+                                "src/MyProject"
+                            ]
+                        },
+                        "version": {
+                            "type": "string",
+                            "examples": [
+                                "${GIT_TAG}"
+                            ]
+                        },
+                        "repo": {
+                            "type": "string",
+                            "examples": [
+                                "http://nuget.local/libs/api/v2/package"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "properties": {
+            "environments": {
+                "title": "Environments filter",
+                "description": "Optionally specify an array of Wharf environment names, as specified in the global 'environments' map/object. If specified then only if the given environment that was used to start the build is included in this array, will this stage execute. Otherwise this stage will be skipped.",
+                "type": [
+                    "array",
+                    "null"
+                ],
+                "items": {
+                    "type": "string"
+                },
+                "uniqueItems": true
+            }
+        }
+    }
+}
