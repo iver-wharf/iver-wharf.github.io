@@ -1,6 +1,8 @@
 ---
 
-Maintained by [Iver](https://www.iver.com). Proudly published with [Docsify](https://docsify.js.org)
+Maintained by [Iver](https://www.iver.com).
+Proudly published with [Docsify](https://docsify.js.org).
+Licensed under the [MIT license](https://spdx.org/licenses/MIT.html).
 
 <!-- SVGs are embedded so that we can alter the fill color through CSS -->
 
