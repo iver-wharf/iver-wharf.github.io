@@ -1,6 +1,6 @@
 ---
 
-Maintained by [Iver](https://www.iver.com).
+Maintained by [Iver](https://www.iver.com/en).
 Proudly published with [Docsify](https://docsify.js.org).
 Licensed under the [MIT license](https://spdx.org/licenses/MIT.html).
 
