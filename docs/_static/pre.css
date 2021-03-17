@@ -1,0 +1,19 @@
+/* This is duplicated to avoid a flicker of the image
+between the point where https://cdn.jsdelivr.net/npm/docsify-darklight-theme@3/dist/docsify-themeable/style.min.css
+is loaded and our theme file is loaded
+ */
+.github-corner {
+    visibility: visible;
+    position: absolute;
+    z-index: 40;
+    top: 0;
+    right: 0;
+    border-bottom: 0;
+    text-decoration: none;
+}
+.github-corner svg {
+    height: 70px;
+    width: 70px;
+    fill: var(--theme-color);
+    color: var(--base-background-color);
+}
