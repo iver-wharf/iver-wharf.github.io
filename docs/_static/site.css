@@ -25,6 +25,7 @@
 
 :root {
 	--primary-accent: #4ba3d9;
+	--base-color: #f7f7f7;
 	--iver-yelow: #fcde06;
 	--mono-hue: 218;
 	--mono-saturation : 12%;
@@ -34,7 +35,10 @@
 	--code-theme-keyword: var(--primary-accent);
 	--sidebar-background: #212122;
 	--mark-background:  var(--iver-yelow);
-	--code-theme-variable: var(--iver-yelow)
+	--code-theme-variable: var(--iver-yelow);
+	--code-theme-punctuation: var(--base-color);
+	--code-theme-text: var(--base-color);
+	--code-theme-selector: var(--iver-yelow)
 }
 
 .app-name-link {
