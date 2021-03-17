@@ -5,7 +5,7 @@
 }
 
 .iver-logo-wordmark svg .st0, .iver-logo-symbol svg .st0 {
-	fill: #000000;
+	fill: white;
 }
 
 .iver-logo-wordmark {
@@ -23,3 +23,24 @@
 	height: 3rem;
 }
 
+:root {
+	--primary-accent: #4ba3d9;
+	--iver-yelow: #fcde06;
+	--mono-hue: 218;
+	--mono-saturation : 12%;
+	--base-background-color: #383c43;
+	--sidebar-name-color: var(--primary-accent);
+	--sidebar-nav-link-color--active: var(--primary-accent);
+	--code-theme-keyword: var(--primary-accent);
+	--sidebar-background: #212122;
+	--mark-background:  var(--iver-yelow);
+	--code-theme-variable: var(--iver-yelow)
+}
+
+.app-name-link {
+	font-size: 37px;
+}
+
+.sidebar-nav p.active > a {
+	color: #4ba3d9;
+}
