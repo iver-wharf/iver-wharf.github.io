@@ -59,3 +59,28 @@
 .token.inserted {
 	color: var(--primary-accent);
 }
+
+/* External link icon */
+
+a[target="_blank"],
+a[onclick="EditOnGithubPlugin.onClick(event)"] {
+	position: relative;
+	margin-right: 1rem;
+}
+a[target="_blank"]:after,
+a[onclick="EditOnGithubPlugin.onClick(event)"]:after {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	font-size: 80%;
+	content: "\f35d";
+	position: absolute;
+	width: 1rem;
+	text-align: right;
+}
+a[target="_blank"].github-corner {
+	position: fixed;
+	margin-right: 0;
+}
+a[target="_blank"].github-corner:after {
+	content: none;
+}
