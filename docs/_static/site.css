@@ -1,3 +1,22 @@
+:root {
+	--primary-accent: #4ba3d9;
+	--base-color: #f7f7f7;
+	--iver-yellow: #fcde06;
+	--mono-hue: 218;
+	--mono-saturation: 12%;
+	--base-background-color: #292c31;
+	--sidebar-name-color: var(--primary-accent);
+	--sidebar-nav-link-color--active: var(--primary-accent);
+	--code-theme-keyword: var(--primary-accent);
+	--sidebar-background: #212122;
+	--mark-background: var(--iver-yellow);
+	--code-theme-variable: var(--iver-yellow);
+	--code-theme-punctuation: var(--base-color);
+	--code-theme-text: var(--base-color);
+	--code-theme-selector: var(--iver-yellow);
+	--cover-blockquote-color: var(--base-color);
+}
+
 .iver-logo-wordmark,
 .iver-logo-symbol {
 	line-height: 6rem;
@@ -24,25 +43,6 @@
 	height: 3rem;
 }
 
-:root {
-	--primary-accent: #4ba3d9;
-	--base-color: #f7f7f7;
-	--iver-yellow: #fcde06;
-	--mono-hue: 218;
-	--mono-saturation: 12%;
-	--base-background-color: #292c31;
-	--sidebar-name-color: var(--primary-accent);
-	--sidebar-nav-link-color--active: var(--primary-accent);
-	--code-theme-keyword: var(--primary-accent);
-	--sidebar-background: #212122;
-	--mark-background: var(--iver-yellow);
-	--code-theme-variable: var(--iver-yellow);
-	--code-theme-punctuation: var(--base-color);
-	--code-theme-text: var(--base-color);
-	--code-theme-selector: var(--iver-yellow);
-	--cover-blockquote-color: var(--base-color);
-}
-
 .app-name-link {
 	font-size: 2.5rem;
 }
@@ -54,4 +54,8 @@
 .cover .cover-main > p:last-child a {
 	color: var(--base-color);
 	border-color: var(--primary-accent);
+}
+
+.token.inserted {
+	color: var(--primary-accent);
 }
