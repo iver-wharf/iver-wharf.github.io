@@ -81,6 +81,7 @@ a[target="_blank"].github-corner {
 	position: fixed;
 	margin-right: 0;
 }
+.cover .cover-main>p:last-child a:after,
 a[target="_blank"].github-corner:after {
 	content: none;
 }
