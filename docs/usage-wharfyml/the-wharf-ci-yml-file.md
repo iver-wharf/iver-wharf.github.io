@@ -5,7 +5,7 @@
 <!-- div:left-panel -->
 
 The `.wharf-ci.yml` file is located at the **root** path of each projects
-repositories. The file is sometimes referred to as the projects
+repositories. The file is sometimes referred to as the project's
 "build definition".
 
 When Wharf inspects a project, either when importing or building, it will start
