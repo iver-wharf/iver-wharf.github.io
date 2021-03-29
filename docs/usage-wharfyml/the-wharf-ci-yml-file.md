@@ -4,8 +4,8 @@
 
 <!-- div:left-panel -->
 
-The `.wharf-ci.yml` file is located at the **root** path of each projects
-repositories. The file is sometimes referred to as the projects
+The `.wharf-ci.yml` file is located at the **root** path of each project's
+repository. The file is sometimes referred to as the project's
 "build definition".
 
 When Wharf inspects a project, either when importing or building, it will start
@@ -58,7 +58,7 @@ complete any task by scripting in Bash or PowerShell.
 ## Schema
 
 The most essential components of your build definition (the `.wharf-ci.yml` file)
-is the stages and the steps.
+are the stages and the steps.
 
 In short:
 
