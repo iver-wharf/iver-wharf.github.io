@@ -1,4 +1,4 @@
-# Wharf
+# About Wharf
 
 Wharf adds the capabilities of self hosting and even running locally to the
 category of Continuous Integration and Continuous Deployment (CI/CD) tooling,
