@@ -43,6 +43,39 @@ To test it out, open a file named `.wharf-ci.yml`. Preview:
 
 <!-- panels:end -->
 
+## Adding to Doom Emacs
+
+<!-- panels:start -->
+
+<!-- div:left-panel -->
+
+1. Include the `:tools lsp` and `:lang (yaml +lsp)` settings in your `init.el`
+   file (ex: `~/.doom.d/init.el`)
+
+2. Add the following to your `config.el` file (ex: `~/.doom.d/config.el`):
+
+   ```lisp
+   (setq lsp-yaml-schemas '(https://iver-wharf.github.io/_static/wharf-ci-schema.json ".wharf-ci.yml"))
+   ```
+
+3. Sync your changes
+
+   ```sh
+   doom sync
+   ```
+
+4. When Emacs is open, press `M-x` `lsp-install-server` and then select `yamlls`
+
+5. Done!
+
+<!-- div:right-panel -->
+
+To test it out, open a file named `.wharf-ci.yml`. Preview:
+
+![image](../_images/wharf-ci-yml-json-schema-preview-doom-emacs.png)
+
+<!-- panels:end -->
+
 ## Adding to Vim/Neovim via Conquer of Completion (CoC)
 
 <!-- panels:start -->
