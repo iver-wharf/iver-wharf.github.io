@@ -9,6 +9,6 @@ nuget-package:
   project-path: src/MyDotNetProject
   repo: nuget.local
   # Optional arguments
-  skip_duplicate: false # silently continues if package version already exists in repo (defaults to false)
+  skip-duplicate: false # silently continues if package version already exists in repo (defaults to false)
   certificatesMountPath: /usr/local/share/ca-certificates # if defined add a k8s configmap containing the different certificates to be added and then mount the configmap as a volume into the folder specified by this property. 
 ```

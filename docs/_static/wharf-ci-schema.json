@@ -544,7 +544,7 @@
                                 "http://nuget.local/libs/api/v2/package"
                             ]
                         },
-                        "skip_duplicate": {
+                        "skip-duplicate": {
                             "type": "boolean",
                             "description": "If set to true, Wharf will silently continue if NuGet package of the same version already exists in the target NuGet repo.",
                             "default": false
