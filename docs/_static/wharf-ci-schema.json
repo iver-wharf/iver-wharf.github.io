@@ -175,48 +175,63 @@
                     "properties": {
                         "file": {
                             "type": "string",
+                            "description": "Dockerfile path, relative to the repository root.",
                             "examples": [
                                 "src/api/Dockerfile"
                             ]
                         },
                         "tag": {
                             "type": "string",
+                            "description": "Docker image tags to add to the image. Supports multiple tags by comma separation, and empty tags (0-length strings) will be silently ignored.",
                             "examples": [
+                                "latest",
+                                "${GIT_TAG}",
                                 "latest,${GIT_COMMIT},${GIT_TAG}"
                             ]
                         },
                         "name": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Docker image name suffix. Defaults to the Wharf step name. Is used when composing the full Docker image name using the formula `${registry}/${group}/${REPO_NAME}/${name}`, or simply `${registry}/${group}/${REPO_NAME}` if `${REPO_NAME}` and `${name}` are equal."
                         },
                         "group": {
                             "type": "string",
-                            "default": "default"
+                            "description": "Docker image name infix. Is used when composing the full Docker image name using the formula `${registry}/${group}/${REPO_NAME}/${name}`, or simply `${registry}/${group}/${REPO_NAME}` if `${REPO_NAME}` and `${name}` are equal.",
+                            "default": "${REPO_GROUP}"
                         },
                         "context": {
                             "type": "string",
+                            "description": "Docker build context path, relative to the repository root. Defaults to using the repository root.",
                             "default": ".",
                             "examples": [
+                                ".",
                                 "src/api"
                             ]
                         },
                         "secret": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Name of secret for credentials to the Docker registry used when pushing the image. Unused if `push` is set to false.",
+                            "default": "gitlab-registry"
                         },
                         "registry": {
                             "type": "string",
+                            "description": "Docker image name prefix. Is used when composing the full Docker image name using the formula `${registry}/${group}/${REPO_NAME}/${name}`, or simply `${registry}/${group}/${REPO_NAME}` if `${REPO_NAME}` and `${name}` are equal.",
+                            "default": "${REG_URL}",
                             "examples": [
                                 "https://harbor.local"
                             ]
                         },
                         "append-cert": {
-                            "type": "boolean"
+                            "type": "boolean",
+                            "description": "Wether or not to append certificates to the Docker image certificate store at /etc/ssl/certs/ca-certificates.crt. Enabled by default if the `${REPO_NAME}` starts with `default`."
                         },
                         "push": {
                             "type": "boolean",
+                            "description": "Wether or not to push the build image. Can be useful to disable if you only need to test that the build actually succeeds.",
                             "default": true
                         },
                         "args": {
                             "type": "array",
+                            "description": "List of Docker build arguments. Roughly translates to `docker build --build-arg ${args[0]} --build-arg ${args[1]} ...`.",
                             "items": {
                                 "type": "string"
                             },
@@ -241,12 +256,15 @@
                     "properties": {
                         "image": {
                             "type": "string",
+                            "description": "Docker image and tag to run the commands in",
                             "examples": [
-                                "alpine:latest"
+                                "alpine:latest",
+                                "${REG_URL}/some-project/some-image:latest"
                             ]
                         },
                         "cmds": {
                             "type": "array",
+                            "description": "List of commands to invoke inside the container, in order.",
                             "items": {
                                 "type": "string"
                             },
@@ -258,6 +276,7 @@
                         },
                         "os": {
                             "type": "string",
+                            "description": "Wether to spin up a Windows or Linux Kubernetes pod to run the commands within. This requires your Kubernetes cluster to have nodes of the appropriate OS and labeled with `kubernetes.io/os`.",
                             "default": "linux",
                             "enum": [
                                 "linux",
@@ -266,21 +285,31 @@
                         },
                         "shell": {
                             "type": "string",
+                            "description": "Wharf will feed all commands into the TTY of this shell to run the commands. If left as `/bin/sh` but `os` is set to `windows` then this changes to `powershell.exe`.",
+                            "default": "/bin/sh",
                             "examples": [
                                 "/bin/sh"
                             ]
                         },
                         "certificatesMountPath": {
                             "type": "string",
+                            "description": "If set, then Wharf will mount a Kubernetes ConfigMap (that has to be preconfigured in Wharf) to the target path set by this property. Useful when having to reach services that uses self-signed CA certificates.",
                             "examples": [
                                 "/usr/local/share/ca-certificates"
                             ]
                         },
                         "secretName": {
                             "type": "string",
+                            "description": "If specified, the target Kubernetes secret name will be mounted inside the container as environment variables. The secret must have the name `wharf-${WHARF_INSTANCE}-project-${WHARF_PROJECT_ID}-secretname-${secretName}`.",
+                            "default": null,
                             "examples": [
                                 "myproject-system-tests-secret"
                             ]
+                        },
+                        "serviceAccount": {
+                            "type": "string",
+                            "description": "Which Kubernetes service account to start up the pod with.",
+                            "default": "default"
                         }
                     }
                 },
@@ -289,18 +318,29 @@
                     "description": "Run `kubectl apply -f` on a Kubernetes manifest.",
                     "type": "object",
                     "additionalProperties": false,
-                    "required": [
-                        "namespace"
+                    "anyOf": [
+                        {
+                            "required": [
+                                "file"
+                            ]
+                        },
+                        {
+                            "required": [
+                                "files"
+                            ]
+                        }
                     ],
                     "properties": {
                         "file": {
                             "type": "string",
+                            "description": "Single file to let kubectl apply. Rougly translates to `kubectl apply -f ${file}`.",
                             "examples": [
                                 "deploy/api.yaml"
                             ]
                         },
                         "files": {
                             "type": "array",
+                            "description": "Multiple files to let kubectl apply. Rougly translates to `kubectl apply -f ${files[0]} -f ${files[1]} ...`.",
                             "items": {
                                 "type": "string"
                             },
@@ -312,26 +352,32 @@
                         },
                         "namespace": {
                             "type": "string",
+                            "description": "Target Kubernetes namespace for kubectl. Uses namespace set in the `cluster` config or the `metadata.namespace` property from the manifest files if omitted.",
                             "examples": [
                                 "stage"
                             ]
                         },
                         "action": {
                             "type": "string",
+                            "description": "What kubectl action/verb to operate. Roughly translates to `kubectl ${action} -f values.yml`.",
                             "default": "apply",
                             "examples": [
                                 "apply",
                                 "create",
                                 "patch",
-                                "delete"
+                                "delete",
+                                "replace"
                             ]
                         },
                         "force": {
                             "type": "boolean",
+                            "description": "Applies the `--force` flag to the kubectl command. Especially useful in combination with setting the `action` property to `replace`.",
                             "default": false
                         },
                         "cluster": {
                             "type": "string",
+                            "description": "Which cluster kubeconfig to use. This has to be preconfigured when installing Wharf, and correlates to the Kubernetes ConfigMap names.",
+                            "default": "kubectl-config",
                             "examples": [
                                 "stage-cluster-config",
                                 "prod-cluster-config"
@@ -352,45 +398,47 @@
                     "properties": {
                         "chart": {
                             "type": "string",
+                            "description": "Helm chart name. This needs to match the name inside the Helm chart repository.",
                             "examples": [
-                                "web-app"
+                                "web-app",
+                                "elasticsearch"
                             ]
                         },
                         "name": {
                             "type": "string",
+                            "description": "Helm release name. This needs to matched the already deployed Helm release in your Kubernetes cluster, if you're hoping for it to make an upgrade.",
                             "examples": [
                                 "test-deploy"
                             ]
                         },
                         "namespace": {
                             "type": "string",
+                            "description": "Target Kubernetes namespace that Helm will install/upgrade the Helm release into.",
                             "examples": [
-                                "stage"
+                                "stage",
+                                "default"
                             ]
                         },
                         "repo": {
                             "type": "string",
+                            "description": "Helm chart repository to try fetch the Helm chart from. If this value starts with the same value as in ${CHART_REPO}, then the ${REG_USER} and ${REG_PASS} built-in variables will be used to authenticate with the chart repository.",
+                            "default": "${CHART_REPO}/${REPO_GROUP}",
                             "examples": [
                                 "https://harbor.local/chartrepo"
                             ]
                         },
                         "set": {
-                            "type": "array",
-                            "items": {
-                                "type": "object",
-                                "minProperties": 1,
-                                "maxProperties": 1
-                            },
+                            "type": "object",
+                            "description": "Set/object where each key-value pair will be applied on top of the existing values.yaml settings used when deploying the Helm release. Translates to `helm install --set ${key}=${value}`.",
                             "examples": [
-                                [
-                                    {
-                                        "image.tag": "latest"
-                                    }
-                                ]
+                                {
+                                    "image.tag": "latest"
+                                }
                             ]
                         },
                         "files": {
                             "type": "array",
+                            "description": "List of Helm values filenames. Translates to `helm install --values ${files[2]} --values ${files[1]} --values ${files[0]}`.",
                             "items": {
                                 "type": "string"
                             },
@@ -402,12 +450,15 @@
                         },
                         "chartVersion": {
                             "type": "string",
+                            "description": "Version of the Helm chart to use from the chart repository. If not specified, Wharf will use the latest Helm chart version.",
                             "examples": [
                                 "0.1.22"
                             ]
                         },
                         "helmVersion": {
                             "type": "string",
+                            "description": "Version of the Helm executable to use. See https://hub.docker.com/r/wharfse/helm/tags for the most up-to-date list.",
+                            "default": "v2.14.1",
                             "examples": [
                                 "v2.14.1",
                                 "v3.0.2",
@@ -417,6 +468,8 @@
                         },
                         "cluster": {
                             "type": "string",
+                            "description": "Which cluster kubeconfig to use. This has to be preconfigured when installing Wharf, and correlates to the Kubernetes ConfigMap names.",
+                            "default": "kubectl-config",
                             "examples": [
                                 "stage-cluster-config",
                                 "prod-cluster-config"
@@ -429,25 +482,28 @@
                     "description": "Packages a sub-folder or repo into a helm-chart and pushes it to a chart-repository.",
                     "type": "object",
                     "additionalProperties": false,
-                    "required": [
-                        "version",
-                        "chart-path"
-                    ],
                     "properties": {
                         "version": {
                             "type": "string",
+                            "description": "Overrides the Helm chart version of the packaged chart. If omitted, the packaged chart will use the version from its Chart.yaml file.",
+                            "default": null,
                             "examples": [
-                                "${GIT_TAG}"
+                                "${GIT_TAG}",
+                                "1.0.0"
                             ]
                         },
                         "chart-path": {
                             "type": "string",
+                            "description": "Relative path from the repository root where to find the Helm chart source code. Defaults to assuming your Helm chart (with the Chart.yaml) is located at your repository root directory.",
+                            "default": null,
                             "examples": [
-                                "/web-app"
+                                "web-app"
                             ]
                         },
                         "destination": {
                             "type": "string",
+                            "description": "Destination URI where the packaged Helm chart will be pushed. For authentication Wharf will use the `${REG_USER}` and `${REG_PASS}` built-in variables that has to be predefined elsewhere when installing Wharf.",
+                            "default": "${CHART_REPO}/${REPO_GROUP}",
                             "examples": [
                                 "https://harbor.local/chartrepo/default"
                             ]
@@ -467,20 +523,38 @@
                     "properties": {
                         "project-path": {
                             "type": "string",
+                            "description": "Points to the .NET project path. Either point it directly to a `.*proj` (ex: .csproj or .fsproj) or a folder that contains 1 `.*proj`.",
                             "examples": [
-                                "src/MyProject"
+                                "src/MyProject",
+                                "src/MyProject/MyProject.csproj"
                             ]
                         },
                         "version": {
                             "type": "string",
+                            "description": "Fed to `dotnet pack` via -p:Version=$version",
                             "examples": [
-                                "${GIT_TAG}"
+                                "${GIT_TAG}",
+                                "1.0.0"
                             ]
                         },
                         "repo": {
                             "type": "string",
+                            "description": "NuGet repository that Wharf will push the built NuGet package to.",
                             "examples": [
                                 "http://nuget.local/libs/api/v2/package"
+                            ]
+                        },
+                        "skip_duplicate": {
+                            "type": "boolean",
+                            "description": "If set to true, Wharf will silently continue if NuGet package of the same version already exists in the target NuGet repo.",
+                            "default": false
+                        },
+                        "certificatesMountPath": {
+                            "type":"string",
+                            "description": "If set, then Wharf will mount a Kubernetes ConfigMap (that has to be preconfigured in Wharf) to the target path set by this property. Useful for mounting self-signed CA certificates that the target NuGet repository (see `repo` property) uses.",
+                            "default": null,
+                            "examples": [
+                                "/usr/local/share/ca-certificates"
                             ]
                         }
                     }
