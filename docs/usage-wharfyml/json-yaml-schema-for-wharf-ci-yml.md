@@ -4,7 +4,7 @@
 that most editors use to have YAML syntax and intellisense, has support for JSON
 schemas.
 
-Wharf has such a schema for their `.wharf-ci.yml` file. 
+Wharf has such a schema for our `.wharf-ci.yml` file.
 
 ## The JSON schema
 
