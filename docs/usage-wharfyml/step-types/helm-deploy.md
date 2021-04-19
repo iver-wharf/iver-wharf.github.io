@@ -10,7 +10,7 @@ helm:
   # Optional arguments
   repo: https://harbor.local/chartrepo # if set to "stage" then will use https://kubernetes-charts.storage.googleapis.com
   set:
-    - image.tag: latest
+    image.tag: latest
   files:
     - values.yaml
   chartVersion: 0.1.22 # version of chart to use. Defaults to empty string, which results in using latest
