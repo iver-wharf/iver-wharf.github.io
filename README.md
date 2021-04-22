@@ -7,16 +7,16 @@ via GitHub Pages over at <https://iver-wharf.github.io/>.
 
 1. Install Node.js <https://nodejs.org/en/download/>
 
-2. Install Docsify.js CLI
+2. Install Docsify.js dependencies
 
    ```sh
-   npm install -g docsify-cli
+   npm install
    ```
 
-3. Run `docsify serve` on the `docs` folder in this repo
+3. Start Docsify's local server (that has hot-reloading!)
 
    ```sh
-   docsify serve docs
+   npm start
    ```
 
 4. Visit <http://localhost:3000>
