@@ -5,15 +5,15 @@ via GitHub Pages over at <https://iver-wharf.github.io/>.
 
 ## Build locally
 
-1. Install Node.js <https://nodejs.org/en/download/>
+1. Install Node.js: <https://nodejs.org/en/download/>
 
-2. Install Docsify.js dependencies
+2. Install [Docsify.js](https://docsify.js.org/) dependencies using NPM:
 
    ```sh
    npm install
    ```
 
-3. Start Docsify's local server (that has hot-reloading!)
+3. Start Docsify's local server (that supports hot-reloading!)
 
    ```sh
    npm start
@@ -25,7 +25,8 @@ via GitHub Pages over at <https://iver-wharf.github.io/>.
 
 1. Install Node.js <https://nodejs.org/en/download/>
 
-2. Install linting dependencies
+2. Install [remark-cli](https://github.com/remarkjs/remark/tree/HEAD/packages/remark-cli)
+   dependencies using NPM:
 
    ```sh
    npm install
