@@ -9,6 +9,7 @@ Other variable sources includes: variables from current
 ## `BUILD_REF`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 Build ID number of Wharf build. This value is unique for any build, no matter
@@ -26,6 +27,7 @@ BUILD_REF=123
 ## `CHART_REPO`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 URL to Helm chart registry where to push Helm charts.
@@ -42,6 +44,7 @@ CHART_REPO=https://harbor.local/chartrepo
 ## `DEFAULT_DOMAIN`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 Domain of where the executor is hosted.
@@ -58,6 +61,7 @@ DEFAULT_DOMAIN=yourdomain.local
 ## `GIT_BRANCH`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 The branch to build. (Alias of `REPO_BRANCH`)
@@ -75,6 +79,7 @@ REPO_BRANCH=feature/fix-error-on-submit
 ## `GIT_COMMIT`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 Base 64 encoded SHA1 hash of the Git commit the build is based on. This is
@@ -92,6 +97,7 @@ GIT_COMMIT=af1b9c1ace369dc854d1fa2402fa019d4178397f
 ## `GIT_COMMIT_AUTHOR_DATE`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 Author date of commit in ISO 8601 format (Git pretty format: `%aI`).
@@ -112,6 +118,7 @@ GIT_COMMIT_AUTHOR_DATE=2020-05-07T14:25:21+02:00
 ## `GIT_COMMIT_COMMITTER_DATE`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 Committer date of commit in ISO 8601 format (Git pretty format: `%cI`).
@@ -132,6 +139,7 @@ GIT_COMMIT_COMMITTER_DATE=2020-05-07T14:25:21+02:00
 ## `GIT_COMMIT_SUBJECT`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 The oneline subject line of the Git commit message
@@ -148,6 +156,7 @@ GIT_COMMIT_SUBJECT=Updated build targets
 ## `GIT_SAFEBRANCH`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 The branch to build, but with directory separators (`/`) replaced with hyphens
@@ -165,6 +174,7 @@ GIT_SAFEBRANCH=feature-fix-error-on-submit
 ## `GIT_TAG`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 Tag that targets the Git commit, or empty if none.
@@ -185,6 +195,7 @@ GIT_TAG=v1.0.0
 ## `REG_URL`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 Docker registry URL.
@@ -201,6 +212,7 @@ REG_URL=harbor.local
 ## `REPO_BRANCH`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 The branch to build.
@@ -217,11 +229,12 @@ REPO_BRANCH=feature/fix-error-on-submit
 ## `REPO_GROUP`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 - **For GitLab**: [Namespace](https://docs.gitlab.com/ee/user/group/#namespaces)
   (user, group, or group/subgroups)
-  
+
 - **For AzureDevOps**: Collection name.
 
 - **For GitHub**: Organization name or username.
@@ -238,6 +251,7 @@ REPO_GROUP=iver-wharf
 ## `REPO_NAME`
 
 <!-- panels:start -->
+
 <!-- div:left-panel -->
 
 The name of the Git repository, as named by the hosting provider.
