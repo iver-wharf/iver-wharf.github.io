@@ -1,6 +1,4 @@
-- Using .wharf-ci.yml
-
-  - [The .wharf-ci.yml file](usage-wharfyml/the-wharf-ci-yml-file.md)
+- [Using .wharf-ci.yml](usage-wharfyml.md)
 
   - [Environments](usage-wharfyml/environments.md)
 
