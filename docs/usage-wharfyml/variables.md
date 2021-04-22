@@ -34,8 +34,12 @@ myStage:
 Output from the sample [`container`](/usage-wharfyml/step-types/container.md)
 step (given that the build ID is equal to 123):
 
-```logs
+```log
 Wharf build ID: 123.
+ERR: Foo bar
+WARNING: moo doo
+INFO: Heyoak
+DEBUG: aeoeo
 ```
 
 <!-- panels:end -->

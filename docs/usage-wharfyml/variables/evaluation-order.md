@@ -39,7 +39,7 @@ my-stage:
 
 Would output something like:
 
-```logs
+```log
 foo 213
 moo 'foo 213' faz v1.0.0
 master
