@@ -64,7 +64,7 @@ In short:
 
 - A step builds a Docker image, or runs some commands in a container, based on
   the step's type.
-  
+
 - A stage runs all of its steps in parallel.
 
 - Wharf runs all of its stages in sequence.
@@ -81,7 +81,6 @@ Except for stages and steps, your build definition may also include usage of
 
 - [Input variables](/usage-wharfyml/variables/input-variables.md), for
   fine-grained per-build control.
-
 
 ## Example
 

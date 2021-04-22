@@ -24,4 +24,3 @@ Those variables are:
 Other variable sources includes: variables from current
 [environment](/usage-wharfyml/environments.md) and
 [inputs](/usage-wharfyml/variables/input-variables.md)
-

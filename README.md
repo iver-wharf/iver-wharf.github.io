@@ -20,4 +20,3 @@ via GitHub Pages over at <https://iver-wharf.github.io/>.
    ```
 
 4. Visit <http://localhost:3000>
-

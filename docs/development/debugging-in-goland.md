@@ -4,7 +4,7 @@
 
 <!-- div:right-panel -->
 
-![GoLand icon](../_images/icon-goland.svg)
+![GoLand icon](../\_images/icon-goland.svg)
 
 > [JetBrains GoLand](https://www.jetbrains.com/go/) is an IDE for the Go
 > programming language.
@@ -18,7 +18,7 @@ It is possible to hook up [JetBrains GoLand](https://www.jetbrains.com/go/) to
 accomplish this.
 
 ?> To those that have experience with the container tools in Visual Studio will
-   feel right at home.
+feel right at home.
 
 <!-- panels:end -->
 
@@ -110,7 +110,7 @@ Changes as a "diff":
    You can add more arguments to the `command` by appending them to the end,
    but keep in mind that you have to add `--` after `/app/main`. Example of
    adding the argument `--loglevel=trace`:
-   
+
    ```yaml
     command: >-
       --listen=:40000
@@ -181,7 +181,7 @@ docker-compose up
 If everything is set up properly you should see that app container is run with
 delve command and 40000 port is forwarded. See the screenshot:
 
-![Logs from docker ps](../_images/debugging-in-goland/running-app.png)
+![Logs from docker ps](../\_images/debugging-in-goland/running-app.png)
 
 ## 7. Connect GoLand for debugging
 
@@ -191,30 +191,30 @@ Goland.
 1. Open Goland editor and click following dropdown. Pick `Edit configurations`
    option.
 
-   !["Configurations" button](../_images/debugging-in-goland/edit-conf1.png)
+   !["Configurations" button](../\_images/debugging-in-goland/edit-conf1.png)
 
 2. You should see window similar to that one below. Click small plus button on
    top-left corner of the screen.
 
-   !["Add new configuration" button](../_images/debugging-in-goland/edit-conf2.png)
+   !["Add new configuration" button](../\_images/debugging-in-goland/edit-conf2.png)
 
 3. Pick "Go Remote" configuration
 
-   !["Go Remote" configuration option](../_images/debugging-in-goland/edit-conf3.png)
+   !["Go Remote" configuration option](../\_images/debugging-in-goland/edit-conf3.png)
 
 4. Add `localhost` as host and port `40000` as port. Give the name to that
    configuration. Previously I named mine `debug`. Apply changes.
 
-   !["Host" and "Port" configs for "Go Remote"](../_images/debugging-in-goland/edit-conf4.png)
+   !["Host" and "Port" configs for "Go Remote"](../\_images/debugging-in-goland/edit-conf4.png)
 
 5. Now you should be able to pick that configuration (1) and start debugging by
    pressing green bug sign (2)
 
-   ![Two ways to "run with debugging"](../_images/debugging-in-goland/edit-conf5.png)
+   ![Two ways to "run with debugging"](../\_images/debugging-in-goland/edit-conf5.png)
 
 6. If debugger will attach succesfully you will be able to see `connected`
    status. And your breakpoints will be hit :)
 
-   !["Debug" panel with breakpoint and local variables](../_images/debugging-in-goland/breakpoint.png)
-   
+   !["Debug" panel with breakpoint and local variables](../\_images/debugging-in-goland/breakpoint.png)
+
 Done!

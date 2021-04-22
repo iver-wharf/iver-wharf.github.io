@@ -19,12 +19,21 @@ Wharf aims to become 100% open sourced by the end of 2021 in both its code and
 its transparent project planning.
 
 [angular]: https://angular.io/
+
 [azuredevops]: https://dev.azure.com/
+
 [gin-gonic]: https://gin-gonic.com/
+
 [github]: https://github.com/
+
 [gitlab]: https://gitlab.com/
+
 [go]: https://golang.org/
+
 [gorm]: https://gorm.io/
+
 [kubernetes]: https://kubernetes.io/
+
 [primeng]: https://primefaces.org/primeng/
+
 [typescript]: https://www.typescriptlang.org/

@@ -13,7 +13,7 @@ Wharf variable.
 - For `string`, `password`, and `number` the `default` property is optional.
 - For `choice` the `default` and `values` properties are required.
 
-![preview of UI from above snippet](../../_images/input-vars-ui-example.png)
+![preview of UI from above snippet](../../\_images/input-vars-ui-example.png)
 
 <!-- div:right-panel -->
 
@@ -51,4 +51,3 @@ myStage:
 ```
 
 <!-- panels:end -->
-

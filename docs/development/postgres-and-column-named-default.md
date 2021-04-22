@@ -55,4 +55,3 @@ m.Database.
 	Where(`"default" = ? AND project_id = ? AND name != ?`, true, defaultBranch.ProjectID, defaultBranch.Name).
 	Update("default", false)
 ```
-

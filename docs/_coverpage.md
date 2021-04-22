@@ -1,4 +1,4 @@
-![logo](_static/logo.svg ':size=200')
+![logo](\_static/logo.svg ":size=200")
 
 # Wharf
 

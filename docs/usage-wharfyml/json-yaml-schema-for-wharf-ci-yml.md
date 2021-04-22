@@ -39,7 +39,7 @@ File is hosted here: <https://iver-wharf.github.io/_static/wharf-ci-schema.json>
 
 To test it out, open a file named `.wharf-ci.yml`. Preview:
 
-![image](../_images/wharf-ci-yml-json-schema-preview-vscode.png)
+![image](../\_images/wharf-ci-yml-json-schema-preview-vscode.png)
 
 <!-- panels:end -->
 
@@ -72,7 +72,7 @@ To test it out, open a file named `.wharf-ci.yml`. Preview:
 
 To test it out, open a file named `.wharf-ci.yml`. Preview:
 
-![image](../_images/wharf-ci-yml-json-schema-preview-doom-emacs.png)
+![image](../\_images/wharf-ci-yml-json-schema-preview-doom-emacs.png)
 
 <!-- panels:end -->
 
@@ -128,6 +128,6 @@ To test it out, open a file named `.wharf-ci.yml`. Preview:
 
 To test it out, open a file named `.wharf-ci.yml`. Preview:
 
-![image](../_images/wharf-ci-yml-json-schema-preview-neovide.png)
+![image](../\_images/wharf-ci-yml-json-schema-preview-neovide.png)
 
 <!-- panels:end -->

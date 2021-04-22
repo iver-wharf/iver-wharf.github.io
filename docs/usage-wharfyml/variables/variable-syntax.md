@@ -30,7 +30,7 @@ the following substitutions would be true
 | `Foo ${  lorem  } bar` | `Foo ipsum bar`
 | `Foo ${%lorem%} bar` | `Foo ${lorem} bar`
 | `Foo ${%%} bar` | `Foo ${} bar`
-| `Foo ${%} bar`<br/>_(`${%}` is a shorthand for `${%%}`)_ | `Foo ${} bar`
+| `Foo ${%} bar`<br/>*(`${%}` is a shorthand for `${%%}`)* | `Foo ${} bar`
 | `Foo ${%   %} bar` | `Foo ${   } bar`
 | `Foo ${%lorem} bar` | ❌ error: undefined variable: `%lorem`
 | `Foo ${} bar` | ❌ error: variable name cannot be empty
