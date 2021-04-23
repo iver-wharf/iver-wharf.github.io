@@ -23,27 +23,14 @@ via GitHub Pages over at <https://iver-wharf.github.io/>.
 
 ## Linting markdown
 
-1. Install Node.js <https://nodejs.org/en/download/>
+Requires Node.js (npm) to be installed: <https://nodejs.org/en/download/>
 
-2. Install [remark-cli](https://github.com/remarkjs/remark/tree/HEAD/packages/remark-cli)
-   dependencies using NPM:
+```sh
+npm install
 
-   ```sh
-   npm install
-   ```
+npm run lint
 
-3. Run the linting script
-
-   ```sh
-   npm run lint
-   ```
-
-   > Some linting errors can be fixed automatically. To do so, run the following
-   > linting fixing script:
-   >
-   > ```sh
-   > npm run lint-fix
-   > ```
-   >
-   > :warning: Please keep in mind that this does change the files in-place.
-   > Make sure you have committed your changes before running this.
+# Some errors can be fixed automatically. Keep in mind that this updates the
+# files in place.
+npm run lint-fix
+```
