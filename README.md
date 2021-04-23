@@ -35,14 +35,14 @@ via GitHub Pages over at <https://iver-wharf.github.io/>.
 3. Run the linting script
 
    ```sh
-   npm run lint-md
+   npm run lint
    ```
 
    > Some linting errors can be fixed automatically. To do so, run the following
    > linting fixing script:
    >
    > ```sh
-   > npm run lint-md-fix
+   > npm run lint-fix
    > ```
    >
    > :warning: Please keep in mind that this does change the files in-place.

@@ -1,8 +1,8 @@
 {
   "scripts": {
     "start": "docsify serve docs",
-    "lint-md": "remark .",
-    "lint-md-fix": "remark . -o"
+    "lint": "remark .",
+    "lint-fix": "remark . -o"
   },
   "devDependencies": {
     "docsify-cli": "^4.4.3",
