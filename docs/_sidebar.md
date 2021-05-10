@@ -34,7 +34,9 @@
 
 - Development (of Wharf)
 
-  - [Debugging in GoLand](development/debugging-in-goland.md)
+  - [Getting started](development/getting-started.md)
+
+  - [Debugging in GoLand](development/debugging-in-goland.md
 
   - Things to keep in mind
 

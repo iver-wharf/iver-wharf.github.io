@@ -15,6 +15,8 @@
 	--code-theme-text: var(--base-color);
 	--code-theme-selector: var(--iver-yellow);
 	--cover-blockquote-color: var(--base-color);
+
+	--docsifytabs-border-color: unset;
 }
 
 .iver-logo-wordmark,
