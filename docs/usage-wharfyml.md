@@ -28,7 +28,7 @@ looking for this `.wharf-ci.yml` file.
 
 Example file structure of a C# .NET repository:
 
-```
+```text
 /.git/
 /.wharf-ci.yml    <-- Here it is
 /LICENSE.md
@@ -57,19 +57,20 @@ complete any task by scripting in Bash or PowerShell.
 
 ## Schema
 
-The most essential components of your build definition (the `.wharf-ci.yml` file)
-are the stages and the steps.
+The most essential components of your build definition (the `.wharf-ci.yml`
+file) are the stages and the steps.
 
 In short:
 
 - A step builds a Docker image, or runs some commands in a container, based on
   the step's type.
-  
+
 - A stage runs all of its steps in parallel.
 
 - Wharf runs all of its stages in sequence.
 
-Read more about these components in the [Stages and steps](/usage-wharfyml/stages-and-steps.md) page.
+Read more about these components in the
+[Stages and steps](/usage-wharfyml/stages-and-steps.md) page.
 
 Except for stages and steps, your build definition may also include usage of
 [Variables](/usage-wharfyml/variables.md)
@@ -81,7 +82,6 @@ Except for stages and steps, your build definition may also include usage of
 
 - [Input variables](/usage-wharfyml/variables/input-variables.md), for
   fine-grained per-build control.
-
 
 ## Example
 

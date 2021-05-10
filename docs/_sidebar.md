@@ -1,6 +1,4 @@
-- Using .wharf-ci.yml
-
-  - [The .wharf-ci.yml file](usage-wharfyml/the-wharf-ci-yml-file.md)
+- [Using .wharf-ci.yml](usage-wharfyml.md)
 
   - [Environments](usage-wharfyml/environments.md)
 
@@ -28,8 +26,8 @@
 
   - [Swagger (self-hosted)](reference/swagger-self-hosted.md)
 
-  - Go reference  
-    ![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white)
+  - Go reference\
+    ![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go\&logoColor=white)
 
     - [messagebus-go](https://pkg.go.dev/github.com/iver-wharf/messagebus-go)
     - [wharf-api-client-go/pkg/wharfapi](https://pkg.go.dev/github.com/iver-wharf/wharf-api-client-go/pkg/wharfapi)
@@ -37,7 +35,7 @@
 - Development (of Wharf)
 
   - [Debugging in GoLand](development/debugging-in-goland.md)
-  
+
   - Things to keep in mind
 
     - [Postgres and column named default](development/postgres-and-column-named-default.md)

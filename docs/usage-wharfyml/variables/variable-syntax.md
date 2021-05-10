@@ -6,7 +6,7 @@
 
 To declare a place to substitute with a variable, use the syntax:
 
-```
+```yaml
 ${variable-name}
 ```
 
@@ -14,7 +14,7 @@ To escape a variable, such as if you want the raw value `${foo}` to remain and
 not have Wharf try to replace the declaration with some value of a variable
 named `foo`, use the syntax:
 
-```
+```yaml
 ${%variable-name%}
 ```
 
@@ -30,7 +30,7 @@ the following substitutions would be true
 | `Foo ${  lorem  } bar` | `Foo ipsum bar`
 | `Foo ${%lorem%} bar` | `Foo ${lorem} bar`
 | `Foo ${%%} bar` | `Foo ${} bar`
-| `Foo ${%} bar`<br/>_(`${%}` is a shorthand for `${%%}`)_ | `Foo ${} bar`
+| `Foo ${%} bar`<br/>*(`${%}` is a shorthand for `${%%}`)* | `Foo ${} bar`
 | `Foo ${%   %} bar` | `Foo ${   } bar`
 | `Foo ${%lorem} bar` | ❌ error: undefined variable: `%lorem`
 | `Foo ${} bar` | ❌ error: variable name cannot be empty
@@ -47,7 +47,7 @@ Variables may be used in:
 Variables may not be used in:
 
 - ❌ input variable names
-- ❌ keys in the .wharf-ci.yml (ex: stage names, step names, environment names, etc.)
+- ❌ keys in the .wharf-ci.yml (ex: stage names, step names, env names, etc.)
 
 ## Example
 

@@ -6,11 +6,11 @@ from either...
 - [Environments](/usage-wharfyml/environments.md), a set of values per
   "deploy environment", chosen by a drop-down when starting a new build.
 
-- [Input variables](/usage-wharfyml/variables/input-variables.md), that each can be
-  changed individually from each other.
+- [Input variables](/usage-wharfyml/variables/input-variables.md), that each
+  can be changed individually from each other.
 
-- [Built-in variables](/usage-wharfyml/variables/built-in-variables.md), metadata that
-  Wharf supplies with each build.
+- [Built-in variables](/usage-wharfyml/variables/built-in-variables.md),
+  metadata that Wharf supplies with each build.
 
 ## Example
 
@@ -31,11 +31,15 @@ myStage:
 
 <!-- div:right-panel -->
 
-Output from the sample [`container`](/usage-wharfyml/step-types/container.md) step
-(given that the build ID is equal to 123):
+Output from the sample [`container`](/usage-wharfyml/step-types/container.md)
+step (given that the build ID is equal to 123):
 
-```
+```log
 Wharf build ID: 123.
+ERR: Foo bar
+WARNING: moo doo
+INFO: Heyoak
+DEBUG: aeoeo
 ```
 
 <!-- panels:end -->
