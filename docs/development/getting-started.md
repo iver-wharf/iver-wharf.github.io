@@ -123,6 +123,9 @@ in the `docker-compose.yml` file. At the time of writing (2021-05-10), those are
 
 - Web (if enabled in `docker-compose.yml`): <http://localhost:5000/>
 
+  !> The web is disabled by default in the `docker-compose.yml`. See how to
+     enable it here: [Hot reloading web](development/hot-reloading-web.md)
+
 - RabbitMQ (if enabled in `docker-compose.yml`): <http://localhost:15672/>
 
   - Username: `guest`
