@@ -22,6 +22,8 @@
 
   - [JSON/YAML schema for .wharf-ci.yml](usage-wharfyml/json-yaml-schema-for-wharf-ci-yml.md)
 
+- [Problems](prob/)
+
 - Reference
 
   - [Swagger (self-hosted)](reference/swagger-self-hosted.md)
