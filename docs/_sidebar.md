@@ -39,6 +39,8 @@
 
   - [Hot reloading web](development/hot-reloading-web.md)
 
+  - [RFCs (Request For Comments)](https://iver-wharf.github.io/rfcs)
+
   - [Debugging in GoLand](development/debugging-in-goland.md)
 
   - Things to keep in mind
