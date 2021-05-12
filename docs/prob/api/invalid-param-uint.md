@@ -33,6 +33,10 @@ letters instead of digits.
 Usually something like the ID number of the project for which you're trying to
 view details for could trigger this problem.
 
+Compared to the very similar problem [`/prob/api/invalid-param-int`](/prob/api/invalid-param-int)
+that is about any integer, **this problem disallows negative integers.** Zero
+is still concidered valid, though.
+
 <!-- div:right-panel -->
 
 :heavy_check_mark: Example valid values:
