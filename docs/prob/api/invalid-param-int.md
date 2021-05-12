@@ -23,8 +23,8 @@ Most fields are validated in the frontend, but if you're calling the backend API
 directly or if there is some validation rule missing in the frontend, then this
 problem may arise.
 
-The problem related to the backend trying to parse or validate an input value
-but fails because of invalid value.
+The problem is related to the backend trying to parse or validate an input value
+but fails because of invalid an value.
 
 This problem specifically relates to invalid integers. Numbers with fractions
 are considered invalid, as well as things like empty values or text containing
