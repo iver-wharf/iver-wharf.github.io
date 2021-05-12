@@ -1,4 +1,6 @@
 :root {
+	color-scheme: dark;
+
 	--primary-accent: #4ba3d9;
 	--base-color: #f7f7f7;
 	--iver-yellow: #fcde06;
@@ -7,6 +9,8 @@
 	--base-background-color: #292c31;
 	--sidebar-name-color: var(--primary-accent);
 	--sidebar-nav-link-color--active: var(--primary-accent);
+	--sidebar-nav-section-link-color: gray;
+	--sidebar-nav-section-link-color--active: var(--sidebar-nav-link-color--active);
 	--code-theme-keyword: var(--primary-accent);
 	--sidebar-background: #212122;
 	--mark-background: var(--iver-yellow);
@@ -60,6 +64,21 @@
 
 .token.inserted {
 	color: #07ED42;
+}
+
+/* Sidebar styling */
+
+.sidebar .section-link {
+	color: var(--sidebar-nav-section-link-color);
+}
+
+.sidebar .section-link:before {
+	content: '#';
+	padding-right: 0.5rem;
+}
+
+.sidebar li.active .section-link {
+	color: var(--sidebar-nav-section-link-color--active);
 }
 
 /* External link icon */
