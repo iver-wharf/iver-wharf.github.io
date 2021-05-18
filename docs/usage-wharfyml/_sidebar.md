@@ -24,4 +24,6 @@
 
 - [Reference](reference/)
 
+- [Problems](prob/)
+
 - [Development (of Wharf)](development/)

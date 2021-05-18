@@ -2,6 +2,8 @@
 
 - [Reference](reference/)
 
+- [Problems](prob/)
+
 - [Development (of Wharf)](development/)
 
   - [Getting started](development/getting-started.md)

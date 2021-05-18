@@ -11,4 +11,6 @@
     - [wharf-api-client-go/pkg/wharfapi](https://pkg.go.dev/github.com/iver-wharf/wharf-api-client-go/pkg/wharfapi)
     - [wharf-api](https://pkg.go.dev/github.com/iver-wharf/wharf-api)
 
+- [Problems](prob/)
+
 - [Development (of Wharf)](development/)
