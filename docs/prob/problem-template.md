@@ -19,7 +19,7 @@ Short description of problem.
 
 <!-- div:left-panel -->
 
-When does this problem occurr?
+When does this problem occur?
 
 <!-- div:right-panel -->
 
