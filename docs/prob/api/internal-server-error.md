@@ -16,7 +16,7 @@ gone terribly wrong that the API does not recognise then this error is reported.
 
 ## Possible causes
 
-If a Go panic occurrs in one of the endpoints, then the API will quickly
+If a Go panic occurs in one of the endpoints, then the API will quickly
 recover, return a `/prob/api/internal-server-error` response to the client,
 and then most probably shutdown.
 

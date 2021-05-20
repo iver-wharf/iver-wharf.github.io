@@ -15,7 +15,24 @@ Short description of problem.
 
 ## Possible causes
 
-When does this problem occurr?
+<!-- panels:start -->
+
+<!-- div:left-panel -->
+
+When does this problem occur?
+
+<!-- div:right-panel -->
+
+:heavy_check_mark: Example valid inputs:
+
+- Input is A
+- Input is B
+
+:x: Example invalid inputs:
+
+- Input is C
+
+<!-- panels:end -->
 
 ## Resolving it
 
