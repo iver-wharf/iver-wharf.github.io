@@ -1,5 +1,7 @@
 # Wharf documentation
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/528712e18d2a4472bddf29aab4328923)](https://www.codacy.com/gh/iver-wharf/iver-wharf.github.io/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iver-wharf/iver-wharf.github.io&amp;utm_campaign=Badge_Grade)
+
 This repo contains a [Docsify.js](https://docsify.js.org/) site that's hosted
 via GitHub Pages over at <https://iver-wharf.github.io/>.
 
@@ -34,3 +36,8 @@ npm run lint
 # files in place.
 npm run lint-fix
 ```
+
+---
+
+Maintained by [Iver](https://www.iver.com/en).
+Licensed under the [MIT license](./LICENSE).
