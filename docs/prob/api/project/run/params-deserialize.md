@@ -38,7 +38,8 @@ HTTP request payload is malformed.
 
 Examples:
 
-- The value `"foo bar"` is sent as the value for a `number`-typed input variable.
+- The value `"foo bar"` is sent as the value for a `number`-typed input
+  variable. 
 
 - HTTP request body to `POST /api/project/{projectid}/{stage}/run` is invalid
   JSON or empty.
