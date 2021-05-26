@@ -34,14 +34,14 @@ Examples:
 - Execution engine was offline when the Wharf API tried to communicate with it
   (ex: restarting, failed to start, or being relocated to a different server by
   [Kubernetes' evicion policies](https://kubernetes.io/docs/concepts/scheduling-eviction/eviction-policy/))
-  
+
 - Execution engine was never deployed. Wether you're using [Jenkins](https://www.jenkins.io/)
   or Wharf's own execution engine, if you never deployed it then no builds can
   be started.
 
 - Execution engine is misconfigured and responded with a
   [non-2xx status code.](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_success)
-  
+
 - Network issues between the execution engine and the Wharf API processes.
   Perhaps a misconfigured firewall or network policy.
 

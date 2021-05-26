@@ -29,7 +29,7 @@ looking for cannot be found. Such as if you've made a typo in the URL or some
 bug in the UI.
 
 This is what is commonly known as the "404 error", as [the status code 404
-stands for "Not Found" on the web.](https://en.wikipedia.org/wiki/HTTP_404)
+stands for "Not Found" on the web.](https://en.wikipedia.org/wiki/HTTP\_404)
 
 <!-- div:right-panel -->
 
