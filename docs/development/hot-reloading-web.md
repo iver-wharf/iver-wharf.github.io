@@ -5,9 +5,10 @@
 > and hit save, after a short moment the web page will reload and your added
 > HTML tag is visable instantly.
 
-In our `docker-compose.yml` to run Wharf locally with we've disabled the `web`
-service by default because we developers find ourselves usually editing the
-frontend and backend from time to time.
+In our `docker-compose.override.yml`/`docker-compose.build.yml` file to run
+Wharf locally with we've disabled the `web` service by default because we
+developers find ourselves usually editing the frontend and backend from
+time to time.
 
 If you're only developing in the backend, it might be nicer to only run the
 web through Docker Compose, but if you need to develop the frontend then
@@ -29,7 +30,8 @@ More exact instructions can be found in the
 
 The basic gist is:
 
-1. Make sure the `web` service is commented out in `docker-compose.yml`
+1. Make sure the `web` service is set to use 0 replicas in the
+   `docker-compose.override.yml`/`docker-compose.build.yml` file
 
 2. Run the Docker Compose setup using `docker-compose up`
 
@@ -63,24 +65,34 @@ docker-compose run --abort-on-container-exit
 
 :x: This **does not** support hot reloading.
 
-Edit your local `docker-compose.yml` file and uncomment the `web` service:
+Edit your local `docker-compose.override.yml`/`docker-compose.build.yml` file
+and uncomment the `web` service building and comment out the replicas setting:
 
 ```diff
-diff --git a/docker-compose.yml b/docker-compose.yml
-index bbff9a4..08d6b8d 100644
---- a/docker-compose.yml
-+++ b/docker-compose.yml
-@@ -7,8 +7,8 @@ services:
-     volumes:
-     - ./wharf-docker-compose/traefik:/etc/traefik # Traefik configuration file
- ## Uncomment to also host web via docker-compose
--#  web:
--#    build: wharf-web
+diff --git a/docker-compose.build.yml b/docker-compose.build.yml
+index cc5ecbd..001fea3 100644
+--- a/docker-compose.build.yml
++++ b/docker-compose.build.yml
+@@ -2,14 +2,14 @@ version: '3'
+ services:
+   ## This disables wharf-web, which lets you run wharf-web locally
+   ## via `npm start` instead. Comment this out to reenable it
+-  web:
+-    deploy:
+-      replicas: 0
++  #web:
++  #  deploy:
++  #    replicas: 0
+   ## Or uncomment this to also build the wharf-web service from source.
+   ## Slight warning that it does take significantly more time to build than
+   ## the other services though.
+-  #web:
+-  #  build: wharf-web
 +  web:
 +    build: wharf-web
+
    api:
-     build: wharf-api
-     ports:
+     build:
 ```
 
 When running via Docker Compose, the web will be available at
