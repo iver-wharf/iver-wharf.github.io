@@ -70,25 +70,16 @@ and uncomment the `web` service building and comment out the replicas setting:
 
 ```diff
 diff --git a/docker-compose.build.yml b/docker-compose.build.yml
-index cc5ecbd..001fea3 100644
+index e0b8165..814a003 100644
 --- a/docker-compose.build.yml
 +++ b/docker-compose.build.yml
-@@ -2,14 +2,14 @@ version: '3'
- services:
-   ## This disables wharf-web, which lets you run wharf-web locally
-   ## via `npm start` instead. Comment this out to reenable it
--  web:
--    deploy:
+@@ -10,8 +10,8 @@ services:
+     ## Slight warning that it does take significantly more time to build than
+     ## the other services though.
+     deploy:
 -      replicas: 0
-+  #web:
-+  #  deploy:
-+  #    replicas: 0
-   ## Or uncomment this to also build the wharf-web service from source.
-   ## Slight warning that it does take significantly more time to build than
-   ## the other services though.
--  #web:
--  #  build: wharf-web
-+  web:
+-    #build: wharf-web
++    #  replicas: 0
 +    build: wharf-web
 
    api:
