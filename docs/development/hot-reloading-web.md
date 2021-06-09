@@ -5,9 +5,9 @@
 > and hit save, after a short moment the web page will reload and your added
 > HTML tag is visable instantly.
 
-In our `docker-compose.yml` to run Wharf locally with we've disabled the `web`
-service by default because we developers find ourselves usually editing the
-frontend and backend from time to time.
+In our local Docker Compose build config, the `docker-compose.build.yml` file,
+we have disabled the `web` service by default because we find it more
+convenient to run it outside the docker environment.
 
 If you're only developing in the backend, it might be nicer to only run the
 web through Docker Compose, but if you need to develop the frontend then
@@ -15,6 +15,11 @@ doing so using hot reloading will speed up your iteration speed significantly.
 
 First follow the guide [Getting started with development of Wharf](development/getting-started.md),
 just up before running `docker-compose build` or `docker-compose up`.
+
+?> The file names `docker-compose.override.yml` and `docker-compose.build.yml`
+are used quite interchangeably throughout this guide, as they are linked
+together in the [Getting started with development of Wharf](development/getting-started.md)
+guide. They both refer to the same file.
 
 ## Running via Node.js
 
@@ -29,7 +34,12 @@ More exact instructions can be found in the
 
 The basic gist is:
 
-1. Make sure the `web` service is commented out in `docker-compose.yml`
+1. Make sure the `web` service is set to use 0 replicas in the
+   `docker-compose.override.yml`/`docker-compose.build.yml` file.
+
+   ?> This is the default in the wharf-docker-compose repository, so you only
+   need to check this if you've tampered with the value previously, such as in
+   the [Running in Docker Compose](#running-in-docker-compose) section below.
 
 2. Run the Docker Compose setup using `docker-compose up`
 
@@ -63,24 +73,25 @@ docker-compose run --abort-on-container-exit
 
 :x: This **does not** support hot reloading.
 
-Edit your local `docker-compose.yml` file and uncomment the `web` service:
+Edit your local `docker-compose.override.yml`/`docker-compose.build.yml` file
+and uncomment the `web` service building and comment out the replicas setting:
 
 ```diff
-diff --git a/docker-compose.yml b/docker-compose.yml
-index bbff9a4..08d6b8d 100644
---- a/docker-compose.yml
-+++ b/docker-compose.yml
-@@ -7,8 +7,8 @@ services:
-     volumes:
-     - ./wharf-docker-compose/traefik:/etc/traefik # Traefik configuration file
- ## Uncomment to also host web via docker-compose
--#  web:
--#    build: wharf-web
-+  web:
+diff --git a/docker-compose.build.yml b/docker-compose.build.yml
+index e0b8165..814a003 100644
+--- a/docker-compose.build.yml
++++ b/docker-compose.build.yml
+@@ -10,8 +10,8 @@ services:
+     ## Slight warning that it does take significantly more time to build than
+     ## the other services though.
+     deploy:
+-      replicas: 0
+-    #build: wharf-web
++    #  replicas: 0
 +    build: wharf-web
+
    api:
-     build: wharf-api
-     ports:
+     build:
 ```
 
 When running via Docker Compose, the web will be available at

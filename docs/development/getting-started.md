@@ -57,16 +57,14 @@ in the <https://github.com/iver-wharf/wharf-docker-compose> repository, but
 that file cannot live inside the `wharf-docker-compose` directory as
 Docker Compose will not be able to find it.
 
-We will create a [symlink](https://en.wikipedia.org/wiki/Symbolic_link) to the
-`docker-compose.yml` file, so that when you pull new changes inside the cloned
-`wharf-docker-compose` repository directory then the symlink will also update.
-
 <!-- tabs:start -->
 
 ### **UNIX (GNU/Linux, Mac OS X)**
 
 ```bash
 ln -s wharf-docker-compose/docker-compose.yml docker-compose.yml
+
+ln -s wharf-docker-compose/docker-compose.build.yml docker-compose.override.yml
 ```
 
 ### **Windows `cmd.exe`**
@@ -76,6 +74,8 @@ enabled, then run:
 
 ```batch
 mklink docker-compose.yml wharf-docker-compose\docker-compose.yml
+
+mklink docker-compose.override.yml wharf-docker-compose\docker-compose.build.yml
 ```
 
 ### **Windows `PowerShell.exe`**
@@ -84,9 +84,25 @@ Open PowerShell as an administrator, then run:
 
 ```powershell
 New-Item -ItemType SymbolicLink -Path docker-compose.yml -Target wharf-docker-compose\docker-compose.yml
+
+New-Item -ItemType SymbolicLink -Path docker-compose.override.yml -Target wharf-docker-compose\docker-compose.build.yml
 ```
 
 <!-- tabs:end -->
+
+We will create two [symlinks](https://en.wikipedia.org/wiki/Symbolic_link) to
+the `docker-compose.yml` file and the `docker-compose.build.yml` file, so that
+when you pull new changes inside the cloned `wharf-docker-compose` repository
+directory then the symlink will also update.
+
+The latter file, `docker-compose.build.yml`, includes instructions to
+Docker Compose on how to build the services from source code, whereas the
+former file, `docker-compose.yml`, will only try to run the pre-built images
+hosted over at [Quay.io](https://quay.io/organization/iver-wharf).
+
+The reason we're choosing a different name for the `docker-compose.build.yml`
+file is that Docker Compose will by default load files named
+`docker-compose.yml`/`.yaml` and `docker-compose.override.yml`/`.yaml`.
 
 ## Build and run via Docker Compose
 
@@ -121,10 +137,10 @@ in the `docker-compose.yml` file. At the time of writing (2021-05-10), those are
   - `github` provider: <http://localhost:5000/import/github/swagger/index.html>
   - `azuredevops` provider: <http://localhost:5000/import/azuredevops/swagger/index.html>
 
-- Web (if enabled in `docker-compose.yml`): <http://localhost:5000/>
+- Web (if enabled in `docker-compose.build.yml`): <http://localhost:5000/>
 
-  !> The web is disabled by default in the `docker-compose.yml`. See how to
-  enable it here: [Hot reloading web](development/hot-reloading-web.md)
+  !> The web is disabled by default in the `docker-compose.build.yml`. See how
+  to enable it here: [Hot reloading web](development/hot-reloading-web.md)
 
 - RabbitMQ (if enabled in `docker-compose.yml`): <http://localhost:15672/>
 
