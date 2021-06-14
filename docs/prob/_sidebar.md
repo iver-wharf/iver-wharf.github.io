@@ -20,5 +20,10 @@
   - [/prob/api/unexpected-db-write-error](/prob/api/unexpected-db-write-error.md)
   - [/prob/api/unexpected-multipart-read-error](/prob/api/unexpected-multipart-read-error.md)
   - [/prob/build/run/invalid-input](/prob/build/run/invalid-input.md)
+  - [/prob/provider/github/connection-error](/prob/provider/github/connection-error.md)
+  - [/prob/provider/github/getting-provider-error](/prob/provider/github/getting-provider-error.md)
+  - [/prob/provider/github/getting-token-error](/prob/provider/github/getting-token-error.md)
+  - [/prob/provider/github/import-group-error](/prob/provider/github/import-group-error.md)
+  - [/prob/provider/github/import-project-error](/prob/provider/github/import-project-error.md)
 
 - [Development (of Wharf)](development/)
