@@ -17,7 +17,8 @@ Unable to import group from GitHub.
 
 <!-- panels:start -->
 
-Occurs when there was an error getting the groups or when putting the projects/branches to Wharf.
+Occurs when there was an error getting the groups or when putting the
+projects/branches to Wharf.
 
 <!-- panels:end -->
 

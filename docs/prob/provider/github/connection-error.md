@@ -1,4 +1,4 @@
-# Problem: Error connecting to GitHub.
+# Problem: Error connecting to GitHub
 
 <!-- panels:start -->
 

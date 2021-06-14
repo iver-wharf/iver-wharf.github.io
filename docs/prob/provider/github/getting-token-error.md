@@ -1,4 +1,4 @@
-# Problem: Error getting token.
+# Problem: Error getting token
 
 <!-- panels:start -->
 
