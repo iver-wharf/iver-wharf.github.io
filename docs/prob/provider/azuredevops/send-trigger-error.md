@@ -17,7 +17,8 @@ Unable to send trigger to wharf-client.
 
 <!-- panels:start -->
 
-There might have been a temporary issue with the API. Try again and see if it works.
+There might have been a temporary issue with the API.
+Try again and see if it works.
 
 <!-- panels:end -->
 
