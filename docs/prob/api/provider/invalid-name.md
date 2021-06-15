@@ -52,4 +52,4 @@ Iver you would create a new issue over at:
 
 - GitHub provider: <https://github.com/iver-wharf/wharf-provider-github/issues/new>
 - GitLab provider: <https://github.com/iver-wharf/wharf-provider-gitlab/issues/new>
-- Azure DevOps provider: <https://github.com/iver-wharf/wharf-provider-azuredevops/issues/new>
+- Azure DevOps provider: <https://github.com/iver-wharf/wharf-api/issues/new>
