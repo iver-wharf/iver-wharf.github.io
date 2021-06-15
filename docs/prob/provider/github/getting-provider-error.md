@@ -5,7 +5,7 @@
 <!-- div:right-panel -->
 
 - Title: `Error getting GitHub provider.`
-- Type: `/prob/provider/getting-provider-error`
+- Type: `/prob/provider/github/getting-provider-error`
 
 <!-- div:left-panel -->
 
