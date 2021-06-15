@@ -20,5 +20,10 @@
   - [/prob/api/unexpected-db-write-error](/prob/api/unexpected-db-write-error.md)
   - [/prob/api/unexpected-multipart-read-error](/prob/api/unexpected-multipart-read-error.md)
   - [/prob/build/run/invalid-input](/prob/build/run/invalid-input.md)
+  - [/prob/provider/gitlab/authentication-error](/prob/provider/gitlab/authentication-error.md)
+  - [/prob/provider/gitlab/creating-importer-error](/prob/provider/gitlab/creating-importer-error.md)
+  - [/prob/provider/gitlab/import-group-error](/prob/provider/gitlab/import-group-error.md)
+  - [/prob/provider/gitlab/import-project-error](/prob/provider/gitlab/import-project-error.md)
+  - [/prob/provider/gitlab/invalid-import-data-error](/prob/provider/gitlab/invalid-import-data-error.md)
 
 - [Development (of Wharf)](development/)
