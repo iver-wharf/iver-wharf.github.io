@@ -1,42 +1,24 @@
-# Problem: Title goes here
+# Problem: Unexpected provider response format
 
 <!-- panels:start -->
 
 <!-- div:right-panel -->
 
-- Title: `Title goes here.`
-- Type: `/prob/problem-type-goes-here`
+- Title: `Unexpected provider response format.`
+- Type: `/prob/provider/unexpected-response-format`
 
 <!-- div:left-panel -->
 
-Short description of problem.
+The provider plugin failed to parse or interpret a response from the remote
+provider.
 
 <!-- panels:end -->
 
 ## Possible causes
 
-<!-- panels:start -->
-
-<!-- div:left-panel -->
-
-When does this problem occur?
-
-<!-- div:right-panel -->
-
-:heavy_check_mark: Example valid inputs:
-
-- Input is A
-- Input is B
-
-:x: Example invalid inputs:
-
-- Input is C
-
-<!-- panels:end -->
+The version of remote provider might be incompatible.
 
 ## Resolving it
-
-How can I, as a user, resolve this issue? Or do I need to promote it?
 
 If you cannot resolve it yourself using the error message, try to contact your
 administrator / operations team that manages your Wharf instance.

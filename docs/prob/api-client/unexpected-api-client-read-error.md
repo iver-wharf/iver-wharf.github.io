@@ -9,14 +9,13 @@
 
 <!-- div:left-panel -->
 
-An unexpected error occurred when reading data
-using the Wharf API.
+An unexpected error occurred when reading data using the Wharf API.
 
 <!-- panels:end -->
 
 ## Possible causes
 
-When does this problem occur?
+This might occur when failing to read a stored token or provider.
 
 ## Resolving it
 

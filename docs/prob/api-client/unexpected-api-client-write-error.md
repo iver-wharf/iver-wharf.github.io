@@ -9,14 +9,13 @@
 
 <!-- div:left-panel -->
 
-An unexpected error occurred when writing data
-using the Wharf API.
+An unexpected error occurred when writing data using the Wharf API.
 
 <!-- panels:end -->
 
 ## Possible causes
 
-When does this problem occur?
+This can occur when failing to import e.g. project data.
 
 ## Resolving it
 

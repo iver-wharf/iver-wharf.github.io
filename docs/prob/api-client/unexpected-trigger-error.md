@@ -1,26 +1,22 @@
-# Problem: Title goes here
+# Problem: Unexpected trigger error
 
 <!-- panels:start -->
 
 <!-- div:right-panel -->
 
-- Title: `Unexpected API client read error.`
-- Type: `/prob/api-client/unexpected-read-error`
+- Title: `Unexpected trigger error.`
+- Type: `/prob/api-client/unexpected-trigger-error`
 
 <!-- div:left-panel -->
 
-An unexpected error occurred when reading data
-using the Wharf API.
+Unexpected error when triggering a new build indirectly from a
+Wharf API client, such as via one of the provider plugins.
 
 <!-- panels:end -->
 
 ## Possible causes
 
-<!-- panels:start -->
-
-<!-- div:left-panel -->
-
-When does this problem occur?
+- The remote provider might be experiencing issues.
 
 ## Resolving it
 
