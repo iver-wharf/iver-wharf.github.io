@@ -17,3 +17,5 @@
   - Things to keep in mind
 
     - [Postgres and column named default](development/postgres-and-column-named-default.md)
+
+    - [Gin ShouldBind vs Bind](development/gin-shouldbind-vs-bind.md)
