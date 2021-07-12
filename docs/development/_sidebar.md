@@ -12,6 +12,8 @@
 
     - [Changelog](development/changelogs/)
 
+    - [Releasing a new version](development/releasing-a-new-version.md)
+
     - [RFCs (Request For Comments)](https://iver-wharf.github.io/rfcs)
 
     - [Hot reloading web](development/hot-reloading-web.md)
