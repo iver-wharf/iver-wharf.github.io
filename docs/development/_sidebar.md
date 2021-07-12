@@ -8,11 +8,17 @@
 
   - [Getting started](development/getting-started.md)
 
-  - [Hot reloading web](development/hot-reloading-web.md)
+  - Guides
 
-  - [RFCs (Request For Comments)](https://iver-wharf.github.io/rfcs)
+    - [Changelog](development/changelogs/)
 
-  - [Debugging in GoLand](development/debugging-in-goland.md)
+    - [RFCs (Request For Comments)](https://iver-wharf.github.io/rfcs)
+
+  - Tips and tricks
+
+    - [Hot reloading web](development/hot-reloading-web.md)
+
+    - [Debugging in GoLand](development/debugging-in-goland.md)
 
   - Things to keep in mind
 
