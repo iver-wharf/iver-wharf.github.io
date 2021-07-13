@@ -14,8 +14,6 @@
 
     - [RFCs (Request For Comments)](https://iver-wharf.github.io/rfcs)
 
-  - Tips and tricks
-
     - [Hot reloading web](development/hot-reloading-web.md)
 
     - [Debugging in GoLand](development/debugging-in-goland.md)
