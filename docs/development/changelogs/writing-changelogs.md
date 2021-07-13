@@ -28,16 +28,16 @@ using changelogs the way we do, we suggest that you check out our guide on
 
 - We're using [SemVer 2.0.0](https://semver.org/) in all of our versioned
   repositories. You are expected to follow the SemVer 2.0.0 rules when
-  potentionally bumping the version in the `CHANGELOG.md` file, and to
+  potentially bumping the version in the `CHANGELOG.md` file, and to
   understand what the difference is between a major, minor, and patch version
   bump is.
 
 ## When to edit it
 
-Non-extensive list of scenarios:
+Non-exhaustive list of scenarios:
 
 - You've opened a new pull request towards one of our GitHub repositories.
-- You've found a typo or grammatic error in one of the changelog notes.
+- You've found a typo or grammatical error in one of the changelog notes.
 - You've identified a missing changelog note on an older version.
 - You wish to release the list of unreleased (WIP) changes.
 
@@ -103,7 +103,7 @@ would add the following:
 You have two main tasks here:
 
 1. Add your changelog note under the existing `(WIP)` section.
-2. Potentionally update the version in the `(WIP)` section.
+2. If needed, update the version in the `(WIP)` section.
 
 The version section with a WIP version shall be bumped **relative to the
 latest released version**, but regarding all changes in the WIP version
