@@ -1,7 +1,7 @@
 # Changelog conventions
 
-This is a non-extensive list of common changelog note formats used throughout
-the repositories 'til this date.
+This is a non-exhaustive list of common changelog note formats used throughout
+the repositories up until now.
 
 Feel free to add more here when you see a pattern emerge or you want to unify
 a type of changelog so they all use a similar format.
