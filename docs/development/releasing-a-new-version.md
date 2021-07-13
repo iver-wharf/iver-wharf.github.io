@@ -1,6 +1,6 @@
 # Releasing a new version
 
-## Create the release PR
+## Creating the release PR
 
 1. Update the `CHANGELOG.md` file in the repository to change the `(WIP)` tag
    to today's date in the format of `(YYYY-MM-DD)`. For example, say today's
@@ -25,7 +25,7 @@
    `release/{version}`. To continue with the above example, you would create
    the branch `release/v1.2.0`.
 
-3. Create a pull request (PR) from your new release branch targetting the
+3. Create a pull request (PR) from your new release branch targeting the
    `master` branch.
 
    - Name the PR `Release {version}`, for example: `Release v1.2.0`
@@ -43,7 +43,7 @@
    - Added new tab "settings" on the project page. (#20)
    ```
 
-4. Wait until the PR has been reviewed
+4. Wait until the PR has been reviewed.
 
 ## Merging a release PR
 
