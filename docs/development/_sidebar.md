@@ -12,6 +12,10 @@
 
     - [Changelog](development/changelogs/)
 
+      - [Writing changelogs](development/changelogs/writing-changelogs.md)
+
+      - [Changelog conventions](development/changelogs/changelog-conventions.md)
+
     - [Releasing a new version](development/releasing-a-new-version.md)
 
     - [RFCs (Request For Comments)](https://iver-wharf.github.io/rfcs)
