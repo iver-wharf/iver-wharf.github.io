@@ -17,7 +17,7 @@ provider.
 ## Possible causes
 
 - The request to the remote provider might have been malformed.
-- BasicAuth might have been invalid.
+- Credentials might have been invalid.
 
 ## Resolving it
 
