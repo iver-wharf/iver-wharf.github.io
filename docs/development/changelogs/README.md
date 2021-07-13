@@ -5,7 +5,7 @@ In all of our repositories (except for the solely documentation ones) we have a
 implemented the respective change.
 
 This document is a guide on how to interpret those files, as well as understand
-why we, the Wharf developers, has decided to use them in the way we do.
+why we, the Wharf developers, have decided to use them in the way we do.
 
 When composing your own changelogs, such as when you're submitting a pull
 request to one of our GitHub repositories, we expect that you've read our guide
@@ -14,7 +14,7 @@ on [writing changelogs](development/changelogs/writing-changelogs.md) first.
 ## What it looks like
 
 Each `CHANGELOG.md` includes a list of versions and the date they were
-released, or the text `(WIP)` if the notes declares changes that has not yet
+released, or the text `(WIP)` if the notes declare changes that have not yet
 been released.
 
 Each version holds a list of notes declaring if something has been added,
