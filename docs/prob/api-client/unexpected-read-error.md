@@ -43,7 +43,7 @@ Non-exhaustive list of possible causes:
 - Wharf's main API has just recently crashed.
 - An operator is upgrading your instance of Wharf.
 - The client (the provider plugin) is misconfigured.
-    - Might be targeting the wrong port.
+  - Might be targeting the wrong port.
 - The client reached the API, but the response was malformed.
 
 <!-- panels:end -->

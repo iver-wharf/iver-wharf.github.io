@@ -20,6 +20,7 @@ The provider plugin might have failed to parse the
 URL(s) received from the remote provider or Wharf API.
 
 The following might be malformed
+
 - A URL in the provider data from the Wharf API.
 - A URL in the response payload from the remote provider.
 

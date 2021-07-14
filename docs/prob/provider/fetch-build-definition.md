@@ -21,7 +21,8 @@ provider.
 
 ## Resolving it
 
-Verify that the access token for the remote provider has permission to read files.
+Verify that the access token for the remote provider has permission to
+read files.
 
 If you cannot resolve it yourself using the error message, try to contact your
 administrator / operations team that manages your Wharf instance.
