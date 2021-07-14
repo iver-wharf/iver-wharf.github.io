@@ -1,25 +1,27 @@
-# Problem: Error fetching build definition
+# Problem: Unexpected provider response format
 
 <!-- panels:start -->
 
 <!-- div:right-panel -->
 
-- Title: `Error fetching build definition.`
-- Type: `/prob/provider/fetch-build-definition`
+- Title: `Unexpected provider response format.`
+- Type: `/prob/provider/unexpected-response-format`
 
 <!-- div:left-panel -->
 
-The provider plugin failed to fetch the build definition from the remote
+The provider plugin failed to parse or interpret a response from the remote
 provider.
 
 <!-- panels:end -->
 
 ## Possible causes
 
-- The request to the remote provider might have been malformed.
-- Credentials might have been invalid.
+The current version of the provider plugin might be incompatible with the
+remote provider.
 
 ## Resolving it
+
+Check if there are any updates for the provider plugin.
 
 If you cannot resolve it yourself using the error message, try to contact your
 administrator / operations team that manages your Wharf instance.

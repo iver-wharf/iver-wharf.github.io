@@ -27,9 +27,9 @@ For the most part only Wharf's provider plugins, such as the
 project, will report this problem when trying to import or refresh projects,
 or for any other reason are trying to contact the Wharf API to write data.
 
-If the Wharf API fails to write the data from its sources
-(such as the database) and fails because of connection issues or disk shortage,
-then a different problem should be returned, such as the
+If the Wharf API fails to write data to its destinations (such as the database)
+and fails because of connection issues or disk shortage, then a different problem
+should be returned, such as the
 [`/prob/api/unexpected-db-write-error`](/prob/api/unexpected-db-write-error).
 
 There's a separate problem for when a client is trying to read data over at
@@ -37,13 +37,14 @@ There's a separate problem for when a client is trying to read data over at
 
 <!-- div:right-panel -->
 
-Non-extensive list of possible causes:
+Non-exhaustive list of possible causes:
 
 - Network issues between the client (the provider plugin) and Wharf's main API.
 - Wharf's main API has just recently crashed.
 - An operator is upgrading your instance of Wharf.
 - The client (the provider plugin) is misconfigured.
-- The client reached the API, but the response was not a proper problem format.
+    - Might be targeting the wrong port.
+- The client reached the API, but the response was malformed.
 
 <!-- panels:end -->
 

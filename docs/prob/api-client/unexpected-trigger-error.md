@@ -34,13 +34,14 @@ issues, then a different problem should be returned, such as the
 
 <!-- div:right-panel -->
 
-Non-extensive list of possible causes:
+Non-exhaustive list of possible causes:
 
 - Network issues between the client (the provider plugin) and Wharf's main API.
 - Wharf's main API has just recently crashed.
 - An operator is upgrading your instance of Wharf.
 - The client (the provider plugin) is misconfigured.
-- The client reached the API, but the response was not a proper problem format.
+  - Might be targeting the wrong port.
+- The client reached the API, but the response was malformed.
 
 <!-- panels:end -->
 

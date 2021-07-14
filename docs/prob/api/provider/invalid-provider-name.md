@@ -5,7 +5,7 @@
 <!-- div:right-panel -->
 
 - Title: `Invalid provider name.`
-- Type: `/prob/api/provider/invalid-name`
+- Type: `/prob/api/invalid-provider-name`
 
 <!-- div:left-panel -->
 
