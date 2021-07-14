@@ -16,7 +16,33 @@ Wharf API client, such as via one of the provider plugins.
 
 ## Possible causes
 
-- The remote provider might be experiencing issues.
+<!-- panels:start -->
+
+<!-- div:left-panel -->
+
+This might occur when failing to trigger a new build via the Wharf API, such as
+when a provider plugin wants to start a build from a webhook request it
+received from an Azure DevOps instance.
+
+For the most part only Wharf's provider plugins, such as the
+[wharf-provider-github](https://github.com/iver-wharf/wharf-provider-github)
+project, will report this problem when trying to trigger a run.
+
+If the Wharf API fails to contact the execution engine because of connection
+issues, then a different problem should be returned, such as the
+[`/prob/api/project/run/trigger`](/prob/api/project/run/trigger).
+
+<!-- div:right-panel -->
+
+Non-extensive list of possible causes:
+
+- Network issues between the client (the provider plugin) and Wharf's main API.
+- Wharf's main API has just recently crashed.
+- An operator is upgrading your instance of Wharf.
+- The client (the provider plugin) is misconfigured.
+- The client reached the API, but the response was not a proper problem format.
+
+<!-- panels:end -->
 
 ## Resolving it
 
