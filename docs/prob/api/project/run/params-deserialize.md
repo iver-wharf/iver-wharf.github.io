@@ -39,7 +39,7 @@ HTTP request payload is malformed.
 Examples:
 
 - The value `"foo bar"` is sent as the value for a `number`-typed input
-  variable. 
+  variable.
 
 - HTTP request body to `POST /api/project/{projectid}/{stage}/run` is invalid
   JSON or empty.
