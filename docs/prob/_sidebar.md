@@ -12,7 +12,6 @@
   - [/prob/api/invalid-param-uint](/prob/api/invalid-param-uint.md)
   - [/prob/api/invalid-param](/prob/api/invalid-param.md)
   - [/prob/api/missing-param-string](/prob/api/missing-param-string.md)
-  - [/prob/api/project/cannot-change-group](/prob/api/project/cannot-change-group.md)
   - [/prob/api/project/run/params-deserialize](/prob/api/project/run/params-deserialize.md)
   - [/prob/api/project/run/params-serialize](/prob/api/project/run/params-serialize.md)
   - [/prob/api/project/run/trigger](/prob/api/project/run/trigger.md)
@@ -27,5 +26,9 @@
   - [/prob/provider/composing-provider-data](/prob/provider/composing-provider-data.md)
   - [/prob/provider/fetch-build-definition](/prob/provider/fetch-build-definition.md)
   - [/prob/provider/unexpected-response-format](/prob/provider/unexpected-response-format.md)
+
+  *Deprecated problems*
+
+  - [/prob/api/project/cannot-change-group](/prob/api/project/cannot-change-group.md)
 
 - [Development (of Wharf)](development/)
