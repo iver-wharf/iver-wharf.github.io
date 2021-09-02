@@ -233,9 +233,15 @@ REPO_BRANCH=feature/fix-error-on-submit
 <!-- div:left-panel -->
 
 - **For GitLab**: [Namespace](https://docs.gitlab.com/ee/user/group/#namespaces)
-  (user, group, or group/subgroups)
+  (user, group, or group/subgroups). For group/subgroup chains, the groups are
+  separated by slashes `/`.
 
-- **For AzureDevOps**: Collection name.
+- **For Azure DevOps**:
+
+  - *Since wharf-provider-azuredevops v2.0.0:* Organization and project,
+    separated with a slash `/`.
+
+  - *Before wharf-provider-azuredevops v2.0.0:* Organization name.
 
 - **For GitHub**: Organization name or username.
 
@@ -258,6 +264,11 @@ The name of the Git repository, as named by the hosting provider.
 
 - **For GitLab**: Repository display name and path name can be different. This
   value will refer to the path name.
+
+- **For Azure DevOps**:
+
+  - *Since wharf-provider-azuredevops v2.0.0:* Git repository name.
+  - *Before wharf-provider-azuredevops v2.0.0:* Project name.
 
 <!-- div:right-panel -->
 
