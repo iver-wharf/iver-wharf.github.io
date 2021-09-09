@@ -4,7 +4,7 @@
 
 <!-- div:right-panel -->
 
-![GoLand icon](../\_images/icon-goland.svg)
+![GoLand icon](../\_images/icon-goland.svg ":class=no-shadow")
 
 > [JetBrains GoLand](https://www.jetbrains.com/go/) is an IDE for the Go
 > programming language.
