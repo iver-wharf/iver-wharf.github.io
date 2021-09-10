@@ -4,7 +4,7 @@ This documentation page is specific to the
 [wharf-provider-azuredevops](https://github.com/iver-wharf/wharf-provider-azuredevops)
 plugin.
 
-To learn more about import projects into Wharf, please refer to the
+To learn more about importing projects into Wharf, please refer to the
 [Importing projects](tutorials/import-projects/) page.
 
 ## Prerequisites
@@ -72,14 +72,14 @@ instance.
 account, meaning an account that's solely indented to be used by Wharf and not
 by a human.
 
-Tokens are generated from the "Personal access tokens" page under the
-"Security" category of the user settings over at the Azure DevOps instance.
+Tokens are generated from the "Personal access tokens" page, found under the
+"Security" category of the user settings, over at the Azure DevOps instance.
 For example, if your user was named `johndoe` over at <https://dev.azure.com/>,
 then you would generate your tokens from `https://dev.azure.com/johndoe/_usersSettings/tokens`.
 
 ### Token scopes
 
-Token need nothing more than the following scope:
+Tokens need nothing more than the following scope:
 
 - **Code**\
   *Source code, repositories, pull requests, and notification*

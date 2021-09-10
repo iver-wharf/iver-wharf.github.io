@@ -4,12 +4,11 @@
 
 <!-- div:left-panel -->
 
-Wharf operates on projects it has stored in it's own database in its own
-format.
+Wharf stores projects in its database in its own format, which it then operates on.
 
-To start populating the Wharf database with data from remote providers you
-import those remote projects and code repositories using one of our provider
-plugins.
+To populate the Wharf database, use one of our provider plugins. They provide
+functionality for importing projects, code repositories, and so on, from remote
+providers.
 
 <!-- div:right-panel -->
 
@@ -17,7 +16,7 @@ plugins.
 > Azure DevOps.
 >
 > The biggest distinction is in Azure DevOps as that term is reused.
-> An Azure DevOps projects (which may contain more than one code repository)
+> An Azure DevOps project (which may contain more than one code repository)
 > does not equal a Wharf project, but instead an Azure DevOps code repository
 > (that lives inside an Azure DevOps project) corresponds to a Wharf project.
 
@@ -25,7 +24,7 @@ plugins.
 
 ## Prerequisites
 
-Wharf need to be deployed with the appropriate provider component to be able
+Wharf needs to be deployed with the appropriate provider component to be able
 to import from a given remote provider.
 
 - To import from <https://github.com>, [wharf-provider-github](https://github.com/iver-wharf/wharf-provider-github)
