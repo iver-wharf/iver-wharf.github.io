@@ -12,6 +12,10 @@
 Once a project has been imported into Wharf, it is not allowed to have its group
 changed.
 
+!> Deprecated: This problem is no longer relevant with the [wharf-api](https://github.com/iver-wharf/wharf-api),
+starting with version v4.2.0. Since v4.2.0, you are allowed to freely update
+both the Wharf group and project names.
+
 <!-- panels:end -->
 
 ## Possible causes
