@@ -1,3 +1,5 @@
+- [Tutorials](tutorials/)
+
 - [Using .wharf-ci.yml](usage-wharfyml/)
 
 - [Reference](reference/)

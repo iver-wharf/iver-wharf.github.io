@@ -106,3 +106,14 @@ a[target="_blank"].github-corner {
 a[target="_blank"].github-corner:after {
 	content: none;
 }
+
+/* Image styling */
+
+article img {
+	box-shadow: 0 0 1rem 0.1rem rgba(0,0,0,0.5);
+}
+
+article img.emoji,
+article img.no-shadow {
+	box-shadow: unset;
+}
