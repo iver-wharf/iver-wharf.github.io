@@ -189,6 +189,15 @@
                                 "latest,${GIT_COMMIT},${GIT_TAG}"
                             ]
                         },
+                        "destination": {
+                            "type": "string",
+                            "description": "Full docker image name, including the optional host name. Defaults to using the formula `${registry}/${group}/${REPO_NAME}/${name}`, or simply `${registry}/${group}/${REPO_NAME}` if `${REPO_NAME}` and `${name}` are equal. If set, then the `docker.name`, `docker.group`, and `docker.registry` fields has no effect.",
+                            "examples": [
+                                "quay.io/iver-wharf/wharf-web",
+                                "docker.io/wharfse/helm",
+                                "harbor.local/myproject/myimage"
+                            ]
+                        },
                         "name": {
                             "type": "string",
                             "description": "Docker image name suffix. Defaults to the Wharf step name. Is used when composing the full Docker image name using the formula `${registry}/${group}/${REPO_NAME}/${name}`, or simply `${registry}/${group}/${REPO_NAME}` if `${REPO_NAME}` and `${name}` are equal."
