@@ -7,6 +7,7 @@
 	--mono-hue: 218;
 	--mono-saturation: 12%;
 	--base-background-color: #292c31;
+	--footer-color: #767e8e;
 	--sidebar-name-color: var(--primary-accent);
 	--sidebar-nav-link-color--active: var(--primary-accent);
 	--sidebar-nav-section-link-color: gray;
@@ -64,6 +65,12 @@
 
 .token.inserted {
 	color: #07ED42;
+}
+
+/* Footer */
+
+footer {
+	color: var(--footer-color);
 }
 
 /* Sidebar styling */
