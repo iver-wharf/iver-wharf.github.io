@@ -1,5 +1,7 @@
 ---
 
+<div class="footer">
+
 Maintained by [Iver](https://www.iver.com/en).
 Proudly published with [Docsify](https://docsify.js.org).
 Licensed under the [MIT license](https://spdx.org/licenses/MIT.html).
@@ -16,4 +18,6 @@ Licensed under the [MIT license](https://spdx.org/licenses/MIT.html).
 <title>I_S_Neg_RGB</title>
 <g><polygon class="st0" points="0,251.1 0,379 347.7,271.9 347.7,144"></polygon><polygon class="st0" points="245.5,47.2 150.2,0 150.1,128.3 245.5,175.5"></polygon></g>
 </svg>
+</div>
+
 </div>
