@@ -35,4 +35,6 @@
 
     - [Postgres and column named default](development/postgres-and-column-named-default.md)
 
+    - [GORM Where in slice](development/gorm-where-in-slice.md)
+
     - [Gin ShouldBind vs Bind](development/gin-shouldbind-vs-bind.md)
