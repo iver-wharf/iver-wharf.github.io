@@ -12,10 +12,15 @@
 
   - Guides
 
+    - [Heuristics](development/heuristics/)
+
+      - [Go](development/heuristics/go.md)
+      - [REST API](development/heuristics/rest-api.md)
+      - [Pull requests](development/heuristics/pull-requests.md)
+
     - [Changelog](development/changelogs/)
 
       - [Writing changelogs](development/changelogs/writing-changelogs.md)
-
       - [Changelog conventions](development/changelogs/changelog-conventions.md)
 
     - [Releasing a new version](development/releasing-a-new-version.md)
