@@ -141,6 +141,3 @@ in the `docker-compose.yml` file. At the time of writing (2021-05-10), those are
 
   !> The web is disabled by default in the `docker-compose.build.yml`. See how
   to enable it here: [Hot reloading web](development/hot-reloading-web.md)
-
-  - Username: `guest`
-  - Password: `guest`
