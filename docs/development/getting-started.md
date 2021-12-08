@@ -137,7 +137,7 @@ in the `docker-compose.yml` file. At the time of writing (2021-12-08), those are
   - `github` provider: <http://localhost:5000/import/github/swagger/index.html>
   - `azuredevops` provider: <http://localhost:5000/import/azuredevops/swagger/index.html>
 
-- Web (if enabled in `docker-compose.build.yml`): <http://localhost:/>
+- Web (if enabled in `docker-compose.build.yml`): <http://localhost:4201/>
 
   !> The web is disabled by default in the `docker-compose.build.yml`. See how
   to enable it here: [Hot reloading web](development/hot-reloading-web.md)
