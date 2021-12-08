@@ -124,7 +124,7 @@ the services combined spew out a lot of logs and it's easy to miss if one of
 them has died.
 
 You can find the names of the services (used in `docker-compose build api`)
-in the `docker-compose.yml` file. At the time of writing (2021-05-10), those are
+in the `docker-compose.yml` file. At the time of writing (2021-12-08), those are
 `proxy`, `api`, `provider-gitlab`, `provider-github`, `provider-azuredevops`,
 `db`
 
