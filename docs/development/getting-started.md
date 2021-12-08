@@ -126,7 +126,7 @@ them has died.
 You can find the names of the services (used in `docker-compose build api`)
 in the `docker-compose.yml` file. At the time of writing (2021-05-10), those are
 `proxy`, `api`, `provider-gitlab`, `provider-github`, `provider-azuredevops`,
-`db`, `rabbitmq`
+`db`
 
 ## Accessing locally
 
@@ -141,8 +141,6 @@ in the `docker-compose.yml` file. At the time of writing (2021-05-10), those are
 
   !> The web is disabled by default in the `docker-compose.build.yml`. See how
   to enable it here: [Hot reloading web](development/hot-reloading-web.md)
-
-- RabbitMQ (if enabled in `docker-compose.yml`): <http://localhost:15672/>
 
   - Username: `guest`
   - Password: `guest`
