@@ -32,7 +32,6 @@
    - Set yourself as assignee
    - Add the label `release`
    - Add at least 2 reviewers
-   - Set the project to the [`Backlog` project](https://github.com/orgs/iver-wharf/projects/1)
 
    In the PR description, you add all the notes from the `CHANGELOG.md` for the
    respective version, something like so:
