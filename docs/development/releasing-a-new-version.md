@@ -70,9 +70,26 @@
 
    There's no need to request the reviewers to review again.
 
-2. Build the Docker image, if the repository has a Dockerfile in it. Such is
-   the case only for the frontend, API, and provider APIs. Then push that image
-   over to <https://quay.io/>.
+2. Build the artifacts:
+
+   - if the repository has a Dockerfile in it (such is the case only for the
+     frontend, API, and provider APIs): Build and push that image over to
+     <https://quay.io/>.
+
+     ```sh
+     make docker version=v1.2.0
+
+     docker push quay.io/iver-wharf/wharf-provider-gitlab:v1.2.0
+     docker push quay.io/iver-wharf/wharf-provider-gitlab:latest
+     ```
+
+   - if the repository is published to NPM: Build and push that package over to
+     <https://www.npmjs.com/>.
+
+     ```sh
+     npm run build # if project needs TypeScript compilation
+     npm publish --access public
+     ```
 
 3. Create a new release based on the newly merged commit that now lives on the
    `master` branch over at the releases page for the GitHub repository, found
@@ -107,6 +124,25 @@
 
      ```sh
      docker pull quay.io/iver-wharf/wharf-provider-gitlab:v1.2.0
+     ```
+
+     ## Changes (since v1.1.0)
+
+     - Added new tab "settings" on the project page. (#20)
+     ````
+
+   - For projects with NPM artifacts that needs to be pushed to
+     <https://www.npmjs.com/>, add a section for the NPM package to the top of
+     the release body text area, such as the following (whilst replacing the
+     project names and version to the appropriate values):
+
+     ````markdown
+     ## NPM package
+
+     Hosted over at <https://www.npmjs.com/package/@iver-wharf/wharf-collect-licenses>
+
+     ```sh
+     npm install --save-dev @iver-wharf/wharf-collect-licenses@v1.0.1
      ```
 
      ## Changes (since v1.1.0)
