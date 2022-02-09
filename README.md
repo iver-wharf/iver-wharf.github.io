@@ -23,18 +23,23 @@ via GitHub Pages over at <https://iver-wharf.github.io/>.
 
 4. Visit <http://localhost:3000>
 
-## Linting markdown
+## Linting
 
-Requires Node.js (npm) to be installed: <https://nodejs.org/en/download/>
+You can lint all of the above at the same time by running:
 
 ```sh
-npm install
+make lint
 
-npm run lint
+make lint-md # only lint Markdown files
+```
 
-# Some errors can be fixed automatically. Keep in mind that this updates the
-# files in place.
-npm run lint-fix
+Some errors can be fixed automatically. Keep in mind that this updates the
+files in place.
+
+```sh
+make lint-fix
+
+make lint-fix-md # only lint and fix Markdown files
 ```
 
 ---
