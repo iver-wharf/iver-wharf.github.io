@@ -1,4 +1,4 @@
-.PHONY: \
+.PHONY: deps \
 	lint lint-md \
 	lint-fix lint-md-fix
 
