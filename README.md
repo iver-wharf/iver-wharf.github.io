@@ -26,6 +26,8 @@ via GitHub Pages over at <https://iver-wharf.github.io/>.
 ## Linting
 
 ```sh
+make deps # download linting dependencies
+
 make lint
 
 make lint-md # only lint Markdown files
