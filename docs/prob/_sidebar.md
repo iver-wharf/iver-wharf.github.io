@@ -9,6 +9,7 @@
   - [/prob/api-client/unexpected-read-error](/prob/api/unexpected-read-error.md)
   - [/prob/api-client/unexpected-trigger-error](/prob/api/unexpected-trigger-error.md)
   - [/prob/api-client/unexpected-write-error](/prob/api/unexpected-write-error.md)
+  - [/prob/api/engine/no-default](/prob/api/engine/no-default.md)
   - [/prob/api/internal-server-error](/prob/api/internal-server-error.md)
   - [/prob/api/invalid-param-int](/prob/api/invalid-param-int.md)
   - [/prob/api/invalid-param-uint](/prob/api/invalid-param-uint.md)
