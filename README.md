@@ -25,9 +25,9 @@ via GitHub Pages over at <https://iver-wharf.github.io/>.
 
 ## Linting
 
-You can lint all of the above at the same time by running:
-
 ```sh
+make deps # download linting dependencies
+
 make lint
 
 make lint-md # only lint Markdown files

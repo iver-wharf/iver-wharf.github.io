@@ -1,15 +1,15 @@
 .PHONY: deps \
 	lint lint-md \
-	lint-fix lint-md-fix
+	lint-fix lint-fix-md
 
 deps:
 	npm install
 
 lint: lint-md
-lint-fix: lint-md-fix
+lint-fix: lint-fix-md
 
 lint-md:
 	npx remark . .github
 
-lint-md-fix:
+lint-fix-md:
 	npx remark . .github -o
