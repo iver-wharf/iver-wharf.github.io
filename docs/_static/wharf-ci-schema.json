@@ -250,6 +250,27 @@
                                     "SECOND_ARG=12453125"
                                 ]
                             ]
+                        },
+                        "secretName": {
+                            "type": "string",
+                            "description": "If specified, the target Kubernetes secret name will be mounted to be available for secret arguments via the secretArgs setting. The secret must have the name `wharf-${WHARF_INSTANCE}-project-${WHARF_PROJECT_ID}-secretname-${secretName}`.",
+                            "default": null,
+                            "examples": [
+                                "myproject-system-tests-secret"
+                            ]
+                        },
+                        "secretArgs": {
+                            "type": "array",
+                            "description": "List of secret Docker build arguments. Roughly translates to `docker build --build-arg ${args[0]} --build-arg ${args[1]} ...` but with the value switched out with the secret values from secretName.",
+                            "items": {
+                                "type": "string"
+                            },
+                            "examples": [
+                                [
+                                    "FIRST_SEC_ARG=mysecretkey1",
+                                    "SECOND_SEC_ARG=mysecretkey2"
+                                ]
+                            ]
                         }
                     }
                 },
