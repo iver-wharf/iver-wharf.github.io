@@ -18,4 +18,8 @@ docker:
   args: # dockerfile building ARGs
     - FIRST_ARG=Value from '.wharf-ci.yml' file!
     - SECOND_ARG=2147483647+1
+  secretName: mysecret # if specified, the target Kubernetes secret name will be mounted inside the container as environment variables. The secret must have the name 'wharf-${WHARF_INSTANCE}-project-${WHARF_PROJECT_ID}-secretname-mysecret'.
+  secretArgs: # dockerfile build ARGs, with values mapped from Kubernetes secret, referenced by secretName
+    - FIRST_SEC_ARG=mysecretkey1
+    - SECOND_SEC_ARG=mysecretkey2
 ```
