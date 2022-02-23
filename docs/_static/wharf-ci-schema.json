@@ -256,7 +256,7 @@
                             "description": "If specified, the target Kubernetes secret name will be mounted to be available for secret arguments via the secretArgs setting. The secret must have the name `wharf-${WHARF_INSTANCE}-project-${WHARF_PROJECT_ID}-secretname-${secretName}`.",
                             "default": null,
                             "examples": [
-                                "myproject-system-tests-secret"
+                                "mysecret"
                             ]
                         },
                         "secretArgs": {
