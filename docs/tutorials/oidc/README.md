@@ -28,7 +28,7 @@ following settings and words of warning to get started.
 
 In azure create a new app registration as a 'web' application. The web 
 platform is used specifically for the oath-tools callback. OBS! It is not 
-used in wharf, wharf uses the SPA type platform.
+used in Wharf, Wharf uses the SPA type platform.
 Use the callback url `https://oauth.tools/callback/code` for testing. In the 
 next step of the tutorial this is used to verify the flow works.
 ![azure-config-auth](azure-config-auth.png)
