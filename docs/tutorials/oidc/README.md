@@ -35,7 +35,7 @@ next step of the tutorial this is used to verify the flow works.
 
 Under the menu item `Certificates and Secrets` its possible to create a 
 client secret. This is not needed for SPA platform that 
-wharf uses, however it is needed when using the (WEB) type of platform that 
+Wharf uses, however it is needed when using the (WEB) type of platform that 
 oath-tools uses.
 
 
