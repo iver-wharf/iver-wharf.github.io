@@ -504,6 +504,13 @@
                                 "stage-cluster-config",
                                 "prod-cluster-config"
                             ]
+                        },
+                        "secret": {
+                            "type": "string",
+                            "description": "Name of Kubernetes secret that holds credentials for downloading the chart.",
+                            "examples": [
+                                "helm-registry"
+                            ]
                         }
                     }
                 },
@@ -536,6 +543,13 @@
                             "default": "${CHART_REPO}/${REPO_GROUP}",
                             "examples": [
                                 "https://harbor.local/chartrepo/default"
+                            ]
+                        },
+                        "secret": {
+                            "type": "string",
+                            "description": "Name of Kubernetes secret that holds credentials for publishing the chart.",
+                            "examples": [
+                                "helm-registry"
                             ]
                         }
                     }
